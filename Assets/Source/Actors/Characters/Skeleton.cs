@@ -86,14 +86,13 @@ namespace DungeonCrawl.Actors.Characters
 
         public bool IsPlayerNear()
         {
-            
-            (int x, int y) targetPosition1 = (Position.x + 1, Position.y);
-            (int x, int y) targetPosition2 = (Position.x - 1, Position.y);
-            (int x, int y) targetPosition3 = (Position.x, Position.y + 1);
-            (int x, int y) targetPosition4 = (Position.x, Position.y - 1);
+            (int x, int y) targetPositionDown = (Position.x + 1, Position.y);
+            (int x, int y) targetPositionUp = (Position.x - 1, Position.y);
+            (int x, int y) targetPositionRight = (Position.x, Position.y + 1);
+            (int x, int y) targetPositionLeft = (Position.x, Position.y - 1);
 
-            if (ActorManager.Singleton.GetActorAt(targetPosition1) is Player || ActorManager.Singleton.GetActorAt(targetPosition2) is Player || 
-                ActorManager.Singleton.GetActorAt(targetPosition3) is Player || ActorManager.Singleton.GetActorAt(targetPosition4) is Player)
+            if (ActorManager.Singleton.GetActorAt(targetPositionDown) is Player || ActorManager.Singleton.GetActorAt(targetPositionUp) is Player || 
+                ActorManager.Singleton.GetActorAt(targetPositionRight) is Player || ActorManager.Singleton.GetActorAt(targetPositionLeft) is Player)
             {
                 return true;
             }
