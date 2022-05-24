@@ -58,7 +58,7 @@ namespace DungeonCrawl.Actors
                     if (actorAtTargetPosition is Skeleton)
                     {
                         // attack
-                        actorAtTargetPosition.DefensiveStats.CurrentHealth -= OffensiveStats.AttackDamage;
+                        AttackMechanics(this, actorAtTargetPosition);
                         UserInterface.Singleton.SetText(actorAtTargetPosition.DefensiveStats.CurrentHealth.ToString(), UserInterface.TextPosition.BottomCenter);
                         // Position = targetPosition;
                     }
@@ -66,6 +66,11 @@ namespace DungeonCrawl.Actors
                     // Position = targetPosition;
                 }
             }
+        }
+
+        private void AttackMechanics<T>(T attacker, T defender) where T : Actor
+        {
+            defender.DefensiveStats.CurrentHealth -= attacker.OffensiveStats.AttackDamage;
         }
 
         /// <summary>
@@ -108,8 +113,8 @@ namespace DungeonCrawl.Actors
         /// </summary>
         public abstract string DefaultName { get; }
         
-        public abstract DefensiveStats DefensiveStats { get; set; }
-        public abstract OffensiveStats OffensiveStats { get; set; }
+        public DefensiveStats DefensiveStats { get; set; } = new DefensiveStats();
+        public OffensiveStats OffensiveStats { get; set; } = new OffensiveStats();
         
     }
 }
