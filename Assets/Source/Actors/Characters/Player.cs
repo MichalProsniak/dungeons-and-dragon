@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Source.Core;
+using UnityEngine;
 
 namespace DungeonCrawl.Actors.Characters
 {
@@ -28,6 +29,16 @@ namespace DungeonCrawl.Actors.Characters
             {
                 // Move right
                 TryMove(Direction.Right);
+            }
+
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                // implement inventory to string
+                UserInterface.Singleton.SetText("INVENTORY", UserInterface.TextPosition.MiddleLeft);
+            }
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                UserInterface.Singleton.SetText("", UserInterface.TextPosition.MiddleLeft);
             }
         }
 
