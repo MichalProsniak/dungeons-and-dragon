@@ -6,6 +6,17 @@ namespace DungeonCrawl.Actors.Characters
     public class Player : Character
     {
         private int _openCloseInventoryCounter = 0;
+
+        public Player()
+        {
+            DefensiveStats.MaxHealth = 50;
+            DefensiveStats.CurrentHealth = DefensiveStats.MaxHealth;
+            DefensiveStats.Armor = 0;
+            DefensiveStats.Evade = 0;
+            OffensiveStats.AttackDamage = 1;
+            OffensiveStats.Accuracy = 7;
+            OffensiveStats.IsWeapon = false;
+        }
         protected override void OnUpdate(float deltaTime)
         {
            
@@ -60,6 +71,13 @@ namespace DungeonCrawl.Actors.Characters
         }
 
         public override int DefaultSpriteId => 24;
-        public override string DefaultName => "Player";
+        public override string DefaultName => "Ragnar";
+
+        private new void Awake()
+        {
+            base.Awake();
+            string message = $"NAME: {DefaultName}\nHEALTH: {DefensiveStats.CurrentHealth}";
+            UserInterface.Singleton.SetText(message, UserInterface.TextPosition.BottomLeft);
+        }
     }
 }

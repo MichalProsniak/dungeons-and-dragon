@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using DungeonCrawl.Actors.Characters;
+using TMPro;
 using UnityEngine;
 
 namespace Assets.Source.Core
@@ -50,11 +51,7 @@ namespace Assets.Source.Core
         {
             _textComponents[(int) textPosition].text = text;
         }
-        public void GameInterface()
-        {
-            string message = "NAME: Kamil\nHEALTH: 0";
-            Singleton.SetText(message, TextPosition.BottomLeft);
-        }
+        
     }
     
    

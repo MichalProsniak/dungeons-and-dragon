@@ -4,13 +4,16 @@ namespace DungeonCrawl.Actors.Characters
 {
     public abstract class Character : Actor
     {
-        public int Health { get; private set; }
+        public DefensiveStats DefensiveStats { get; set; } = new DefensiveStats();
+        public OffensiveStats OffensiveStats { get; set; } = new OffensiveStats();
+        
 
         public void ApplyDamage(int damage)
         {
-            Health -= damage;
+            int health = DefensiveStats.CurrentHealth;
+            health -= damage;
 
-            if (Health <= 0)
+            if (health <= 0)
             {
                 // Die
                 OnDeath();
