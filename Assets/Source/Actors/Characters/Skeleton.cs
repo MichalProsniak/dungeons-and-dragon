@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DungeonCrawl.Core;
+using UnityEngine;
 
 namespace DungeonCrawl.Actors.Characters
 {
@@ -14,6 +15,14 @@ namespace DungeonCrawl.Actors.Characters
             OffensiveStats.Accuracy = 6;
             OffensiveStats.IsWeapon = false;
         }
+
+        protected override void OnUpdate(float deltaTime)
+        {
+            if (DefensiveStats.CurrentHealth <= 0)
+            {
+                OnDeath();
+            }
+        }
         
         public override bool OnCollision(Actor anotherActor)
         {
@@ -22,6 +31,8 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnDeath()
         {
+            // ActorManager actorManager = new ActorManager();
+            ActorManager.Singleton.DestroyActor(this);
             Debug.Log("Well, I was already dead anyway...");
         }
 

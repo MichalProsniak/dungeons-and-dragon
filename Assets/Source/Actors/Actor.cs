@@ -49,6 +49,8 @@ namespace DungeonCrawl.Actors
             {
                 // No obstacle found, just move
                 Position = targetPosition;
+                UserInterface.Singleton.SetText("", UserInterface.TextPosition.TopLeft);
+                
             }
             else
             {
@@ -59,7 +61,17 @@ namespace DungeonCrawl.Actors
                     {
                         // attack
                         AttackMechanics(this, actorAtTargetPosition);
-                        UserInterface.Singleton.SetText(actorAtTargetPosition.DefensiveStats.CurrentHealth.ToString(), UserInterface.TextPosition.BottomCenter);
+                        if (actorAtTargetPosition.DefensiveStats.CurrentHealth > 0)
+                        {
+                            AttackMechanics(actorAtTargetPosition, this);
+                            
+                        }
+                        else
+                        {
+                            
+                        }
+                        UserInterface.Singleton.SetText($"NAME: {actorAtTargetPosition.DefaultName}\nHEALTH: {actorAtTargetPosition.DefensiveStats.CurrentHealth}",
+                            UserInterface.TextPosition.TopLeft);
                         // Position = targetPosition;
                     }
                     

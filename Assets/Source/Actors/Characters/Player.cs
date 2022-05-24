@@ -58,6 +58,8 @@ namespace DungeonCrawl.Actors.Characters
                     UserInterface.Singleton.SetText("", UserInterface.TextPosition.MiddleLeft);
                 }
             }
+            PlayerInformationInterface();
+            
         }
 
         public override bool OnCollision(Actor anotherActor)
@@ -76,6 +78,12 @@ namespace DungeonCrawl.Actors.Characters
         private new void Awake()
         {
             base.Awake();
+            string message = $"NAME: {DefaultName}\nHEALTH: {DefensiveStats.CurrentHealth}";
+            UserInterface.Singleton.SetText(message, UserInterface.TextPosition.BottomLeft);
+        }
+
+        private void PlayerInformationInterface()
+        {
             string message = $"NAME: {DefaultName}\nHEALTH: {DefensiveStats.CurrentHealth}";
             UserInterface.Singleton.SetText(message, UserInterface.TextPosition.BottomLeft);
         }
