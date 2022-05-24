@@ -1,6 +1,4 @@
-﻿using System;
-using Assets.Source.Actors.Items;
-using Assets.Source.Core;
+﻿using Assets.Source.Core;
 using UnityEngine;
 
 namespace DungeonCrawl.Actors.Characters
@@ -8,7 +6,6 @@ namespace DungeonCrawl.Actors.Characters
     public class Player : Character
     {
         private int _openCloseInventoryCounter = 0;
-        private string _tempInvDisplay = "INVENTORY \n";
 
         public Player()
         {
@@ -19,12 +16,10 @@ namespace DungeonCrawl.Actors.Characters
             OffensiveStats.AttackDamage = 5;
             OffensiveStats.Accuracy = 7;
             OffensiveStats.IsWeapon = false;
-            
         }
         protected override void OnUpdate(float deltaTime)
         {
-            Inventory playerInventory = new Inventory();
-
+           
             if (Input.GetKeyDown(KeyCode.W))
             {
                 // Move up
@@ -55,26 +50,13 @@ namespace DungeonCrawl.Actors.Characters
                 {
                     // implement inventory to string
                     _openCloseInventoryCounter++;
-                    //UserInterface.Singleton.SetText("INVENTORY", UserInterface.TextPosition.MiddleLeft);
-                    for (int i = 0; i < playerInventory._PlayerInventory.Count; i++)
-                    {
-                        _tempInvDisplay += playerInventory._PlayerInventory[i] + "\n";
-                    }
-                    UserInterface.Singleton.SetText(_tempInvDisplay, UserInterface.TextPosition.MiddleLeft);
-                    _tempInvDisplay = "INVENTORY \n";
+                    UserInterface.Singleton.SetText("INVENTORY", UserInterface.TextPosition.MiddleLeft);
                 }
                 else
                 {
                     _openCloseInventoryCounter = 0;
                     UserInterface.Singleton.SetText("", UserInterface.TextPosition.MiddleLeft);
-
                 }
-            }
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                playerInventory._PlayerInventory.Add("cos10");
-                UserInterface.Singleton.SetText(playerInventory._PlayerInventory.Count.ToString(), UserInterface.TextPosition.TopRight);
-                UserInterface.Singleton.SetText("to jest konsola", UserInterface.TextPosition.MiddleRight);
             }
             PlayerInformationInterface();
             
@@ -105,7 +87,5 @@ namespace DungeonCrawl.Actors.Characters
             string message = $"NAME: {DefaultName}\nHEALTH: {DefensiveStats.CurrentHealth}";
             UserInterface.Singleton.SetText(message, UserInterface.TextPosition.BottomLeft);
         }
-
-
     }
 }

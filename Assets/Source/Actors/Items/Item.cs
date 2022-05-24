@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Assets.Source.Core;
 using DungeonCrawl.Actors;
-using DungeonCrawl.Core;
 using UnityEngine;
 
 namespace Assets.Source.Actors.Items
@@ -23,6 +22,10 @@ namespace Assets.Source.Actors.Items
 
 
         private (int x, int y) _position;
-        public override int Z => -1;
+        //public void IsPickable()
+        //{
+
+
+        //}
     }
 }
