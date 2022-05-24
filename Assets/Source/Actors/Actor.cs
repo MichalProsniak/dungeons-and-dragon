@@ -1,4 +1,6 @@
-﻿using DungeonCrawl.Core;
+﻿using DungeonCrawl.Actors.Characters;
+using DungeonCrawl.Actors.Static;
+using DungeonCrawl.Core;
 using UnityEngine;
 
 namespace DungeonCrawl.Actors
@@ -52,7 +54,13 @@ namespace DungeonCrawl.Actors
                 if (actorAtTargetPosition.OnCollision(this))
                 {
                     // Allowed to move
-                    //Position = targetPosition;
+                    if (actorAtTargetPosition is Skeleton)
+                    {
+                        // attack
+                        Position = targetPosition;
+                    }
+                    
+                    // Position = targetPosition;
                 }
             }
         }
