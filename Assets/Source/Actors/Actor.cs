@@ -1,4 +1,5 @@
-﻿using DungeonCrawl.Actors.Characters;
+﻿using Assets.Source.Core;
+using DungeonCrawl.Actors.Characters;
 using DungeonCrawl.Actors.Static;
 using DungeonCrawl.Core;
 using UnityEngine;
@@ -57,7 +58,9 @@ namespace DungeonCrawl.Actors
                     if (actorAtTargetPosition is Skeleton)
                     {
                         // attack
-                        Position = targetPosition;
+                        actorAtTargetPosition.DefensiveStats.CurrentHealth -= OffensiveStats.AttackDamage;
+                        UserInterface.Singleton.SetText(actorAtTargetPosition.DefensiveStats.CurrentHealth.ToString(), UserInterface.TextPosition.BottomCenter);
+                        // Position = targetPosition;
                     }
                     
                     // Position = targetPosition;
@@ -104,5 +107,9 @@ namespace DungeonCrawl.Actors
         ///     Default name assigned to this actor type
         /// </summary>
         public abstract string DefaultName { get; }
+        
+        public abstract DefensiveStats DefensiveStats { get; set; }
+        public abstract OffensiveStats OffensiveStats { get; set; }
+        
     }
 }

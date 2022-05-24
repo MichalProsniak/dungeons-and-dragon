@@ -1,4 +1,6 @@
-﻿namespace DungeonCrawl.Actors.Static
+﻿using DungeonCrawl.Actors.Characters;
+
+namespace DungeonCrawl.Actors.Static
 {
     public class Floor : Actor
     {
@@ -6,5 +8,8 @@
         public override string DefaultName => "Floor";
 
         public override bool Detectable => false;
+
+        public override DefensiveStats DefensiveStats { get; set; }
+        public override OffensiveStats OffensiveStats { get; set; }
     }
 }

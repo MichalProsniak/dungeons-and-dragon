@@ -13,7 +13,7 @@ namespace DungeonCrawl.Actors.Characters
             DefensiveStats.CurrentHealth = DefensiveStats.MaxHealth;
             DefensiveStats.Armor = 0;
             DefensiveStats.Evade = 0;
-            OffensiveStats.AttackDamage = 1;
+            OffensiveStats.AttackDamage = 5;
             OffensiveStats.Accuracy = 7;
             OffensiveStats.IsWeapon = false;
         }

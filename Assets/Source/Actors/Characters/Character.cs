@@ -4,9 +4,9 @@ namespace DungeonCrawl.Actors.Characters
 {
     public abstract class Character : Actor
     {
-        public DefensiveStats DefensiveStats { get; set; } = new DefensiveStats();
-        public OffensiveStats OffensiveStats { get; set; } = new OffensiveStats();
-        
+        public override DefensiveStats DefensiveStats { get; set; } = new DefensiveStats();
+        public override OffensiveStats OffensiveStats { get; set; } = new OffensiveStats();
+
 
         public void ApplyDamage(int damage)
         {
