@@ -51,6 +51,7 @@ namespace DungeonCrawl.Actors
                 // No obstacle found, just move
                 Position = targetPosition;
                 UserInterface.Singleton.SetText("", UserInterface.TextPosition.TopLeft);
+                UserInterface.Singleton.SetText("", UserInterface.TextPosition.MiddleCenter);
                 
                 UserInterface.Singleton.SetText("", UserInterface.TextPosition.BottomCenter);
             }
@@ -62,11 +63,31 @@ namespace DungeonCrawl.Actors
                     if (actorAtTargetPosition is Skeleton)
                     {
                         // attack
-                        AttackMechanics(this, actorAtTargetPosition);
+                        System.Random rnd = new System.Random();
+                        string hitMessage = "";
+                        int hitAccuracyLevel = rnd.Next(0, 10);
+                        if (hitAccuracyLevel <= OffensiveStats.Accuracy - actorAtTargetPosition.DefensiveStats.Evade)
+                        {
+                            AttackMechanics(this, actorAtTargetPosition);
+                            hitMessage += "Player: HIT";
+                        }
+                        else
+                        {
+                            hitMessage += "Player: MISS";
+                        }
                         if (actorAtTargetPosition.DefensiveStats.CurrentHealth > 0)
                         {
-                            AttackMechanics(actorAtTargetPosition, this);
-                            
+                            hitAccuracyLevel = rnd.Next(0, 10);
+                            if (hitAccuracyLevel <=
+                                actorAtTargetPosition.OffensiveStats.Accuracy - DefensiveStats.Evade)
+                            {
+                                AttackMechanics(actorAtTargetPosition, this);
+                                hitMessage += "\nSkeleton: HIT";
+                            }
+                            else
+                            {
+                                hitMessage += "\nSkeleton: MISS";
+                            }
                         }
                         else
                         {
@@ -74,6 +95,8 @@ namespace DungeonCrawl.Actors
                         }
                         UserInterface.Singleton.SetText($"NAME: {actorAtTargetPosition.DefaultName}\nHEALTH: {actorAtTargetPosition.DefensiveStats.CurrentHealth}",
                             UserInterface.TextPosition.TopLeft);
+                        UserInterface.Singleton.SetText(hitMessage,
+                            UserInterface.TextPosition.BottomCenter);
                         // Position = targetPosition;
                     }else if (actorAtTargetPosition is Item)
                     {
