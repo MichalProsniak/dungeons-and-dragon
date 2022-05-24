@@ -22,7 +22,7 @@ namespace DungeonCrawl.Actors
         private (int x, int y) _position;
         private SpriteRenderer _spriteRenderer;
 
-        private void Awake()
+        protected void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -50,6 +50,8 @@ namespace DungeonCrawl.Actors
             {
                 // No obstacle found, just move
                 Position = targetPosition;
+                UserInterface.Singleton.SetText("", UserInterface.TextPosition.TopLeft);
+                
                 UserInterface.Singleton.SetText("", UserInterface.TextPosition.BottomCenter);
             }
             else
@@ -60,6 +62,19 @@ namespace DungeonCrawl.Actors
                     if (actorAtTargetPosition is Skeleton)
                     {
                         // attack
+                        AttackMechanics(this, actorAtTargetPosition);
+                        if (actorAtTargetPosition.DefensiveStats.CurrentHealth > 0)
+                        {
+                            AttackMechanics(actorAtTargetPosition, this);
+                            
+                        }
+                        else
+                        {
+                            
+                        }
+                        UserInterface.Singleton.SetText($"NAME: {actorAtTargetPosition.DefaultName}\nHEALTH: {actorAtTargetPosition.DefensiveStats.CurrentHealth}",
+                            UserInterface.TextPosition.TopLeft);
+                        // Position = targetPosition;
                         Position = targetPosition;
                     }else if (actorAtTargetPosition is Item)
                     {
@@ -67,6 +82,11 @@ namespace DungeonCrawl.Actors
                     }
                 }
             }
+        }
+
+        private void AttackMechanics<T>(T attacker, T defender) where T : Actor
+        {
+            defender.DefensiveStats.CurrentHealth -= attacker.OffensiveStats.AttackDamage;
         }
 
         /// <summary>
@@ -110,5 +130,9 @@ namespace DungeonCrawl.Actors
         ///     Default name assigned to this actor type
         /// </summary>
         public abstract string DefaultName { get; }
+        
+        public DefensiveStats DefensiveStats { get; set; } = new DefensiveStats();
+        public OffensiveStats OffensiveStats { get; set; } = new OffensiveStats();
+        
     }
 }
