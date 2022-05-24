@@ -75,7 +75,6 @@ namespace DungeonCrawl.Actors
                         UserInterface.Singleton.SetText($"NAME: {actorAtTargetPosition.DefaultName}\nHEALTH: {actorAtTargetPosition.DefensiveStats.CurrentHealth}",
                             UserInterface.TextPosition.TopLeft);
                         // Position = targetPosition;
-                        Position = targetPosition;
                     }else if (actorAtTargetPosition is Item)
                     {
                         Position = targetPosition;
