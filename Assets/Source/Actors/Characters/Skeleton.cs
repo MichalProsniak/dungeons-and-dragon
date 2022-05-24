@@ -10,11 +10,11 @@ namespace DungeonCrawl.Actors.Characters
         System.Random rnd = new System.Random();
         public Skeleton()
         {
-            DefensiveStats.MaxHealth = 10;
+            DefensiveStats.MaxHealth = 20;
             DefensiveStats.CurrentHealth = DefensiveStats.MaxHealth;
-            DefensiveStats.Armor = 0;
+            DefensiveStats.Armor = 2;
             DefensiveStats.Evade = 0;
-            OffensiveStats.AttackDamage = 1;
+            OffensiveStats.AttackDamage = 2;
             OffensiveStats.Accuracy = 6;
             OffensiveStats.IsWeapon = false;
         }
