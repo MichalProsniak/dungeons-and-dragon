@@ -31,7 +31,6 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnDeath()
         {
-            // ActorManager actorManager = new ActorManager();
             ActorManager.Singleton.DestroyActor(this);
             Debug.Log("Well, I was already dead anyway...");
         }
