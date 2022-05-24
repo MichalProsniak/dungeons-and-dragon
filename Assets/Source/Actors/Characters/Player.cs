@@ -20,6 +20,10 @@ namespace DungeonCrawl.Actors.Characters
         }
         protected override void OnUpdate(float deltaTime)
         {
+            if (DefensiveStats.CurrentHealth <= 0)
+            {
+                OnDeath();
+            }
            
             if (Input.GetKeyDown(KeyCode.W))
             {

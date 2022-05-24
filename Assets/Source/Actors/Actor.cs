@@ -106,7 +106,7 @@ namespace DungeonCrawl.Actors
                     hitMessage += "\nSkeleton: MISS";
                 }
             }
-
+            
             return hitMessage;
         }
         
