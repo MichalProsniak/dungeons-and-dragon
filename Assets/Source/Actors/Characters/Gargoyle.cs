@@ -3,16 +3,16 @@ using UnityEngine;
 
 namespace DungeonCrawl.Actors.Characters
 {
-    public class Skeleton : Character
+    public class Gargoyle : Character
     {
-        public Skeleton()
+        public Gargoyle()
         {
-            DefensiveStats.MaxHealth = 20;
+            DefensiveStats.MaxHealth = 30;
             DefensiveStats.CurrentHealth = DefensiveStats.MaxHealth;
-            DefensiveStats.Armor = 2;
-            DefensiveStats.Evade = 0;
-            OffensiveStats.AttackDamage = 2;
-            OffensiveStats.Accuracy = 6;
+            DefensiveStats.Armor = 5;
+            DefensiveStats.Evade = -10;
+            OffensiveStats.AttackDamage = 5;
+            OffensiveStats.Accuracy = 4;
             OffensiveStats.IsWeapon = false;
         }
 
@@ -36,7 +36,7 @@ namespace DungeonCrawl.Actors.Characters
             Debug.Log("Well, I was already dead anyway...");
         }
 
-        public override int DefaultSpriteId => 316;
-        public override string DefaultName => "Skeleton";
+        public override int DefaultSpriteId => 317;
+        public override string DefaultName => "Gargoyle";
     }
 }

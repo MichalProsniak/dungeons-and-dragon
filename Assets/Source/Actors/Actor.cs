@@ -38,6 +38,7 @@ namespace DungeonCrawl.Actors
         {
             _spriteRenderer.sprite = ActorManager.Singleton.GetSprite(id);
         }
+        private System.Random _rnd = new System.Random();
 
         public void TryMove(Direction direction)
         {
@@ -60,44 +61,16 @@ namespace DungeonCrawl.Actors
                 if (actorAtTargetPosition.OnCollision(this))
                 {
                     // Allowed to move
-                    if (actorAtTargetPosition is Skeleton)
+                    if (actorAtTargetPosition is Skeleton || 
+                        actorAtTargetPosition is Gargoyle || 
+                        actorAtTargetPosition is Ghost)
                     {
                         // attack
-                        System.Random rnd = new System.Random();
-                        string hitMessage = "";
-                        int hitAccuracyLevel = rnd.Next(0, 10);
-                        if (hitAccuracyLevel <= OffensiveStats.Accuracy - actorAtTargetPosition.DefensiveStats.Evade)
-                        {
-                            AttackMechanics(this, actorAtTargetPosition);
-                            hitMessage += "Player: HIT";
-                        }
-                        else
-                        {
-                            hitMessage += "Player: MISS";
-                        }
-                        if (actorAtTargetPosition.DefensiveStats.CurrentHealth > 0)
-                        {
-                            hitAccuracyLevel = rnd.Next(0, 10);
-                            if (hitAccuracyLevel <=
-                                actorAtTargetPosition.OffensiveStats.Accuracy - DefensiveStats.Evade)
-                            {
-                                AttackMechanics(actorAtTargetPosition, this);
-                                hitMessage += "\nSkeleton: HIT";
-                            }
-                            else
-                            {
-                                hitMessage += "\nSkeleton: MISS";
-                            }
-                        }
-                        else
-                        {
-                            
-                        }
+                        string hitMessage = FightMechanics(this, actorAtTargetPosition);
                         UserInterface.Singleton.SetText($"NAME: {actorAtTargetPosition.DefaultName}\nHEALTH: {actorAtTargetPosition.DefensiveStats.CurrentHealth}",
                             UserInterface.TextPosition.TopLeft);
                         UserInterface.Singleton.SetText(hitMessage,
                             UserInterface.TextPosition.BottomCenter);
-                        // Position = targetPosition;
                     }else if (actorAtTargetPosition is Item)
                     {
                         Position = targetPosition;
@@ -106,9 +79,60 @@ namespace DungeonCrawl.Actors
             }
         }
 
+        private string FightMechanics<T>(T attacker, T defender) where T: Actor
+        {
+            string hitMessage = "";
+            int hitAccuracyLevel = _rnd.Next(0, 10);
+            if (hitAccuracyLevel <= attacker.OffensiveStats.Accuracy - defender.DefensiveStats.Evade)
+            {
+                AttackMechanics(attacker, defender);
+                hitMessage += "Player: HIT";
+            }
+            else
+            {
+                hitMessage += "Player: MISS";
+            }
+            if (defender.DefensiveStats.CurrentHealth > 0)
+            {
+                hitAccuracyLevel = _rnd.Next(0, 10);
+                if (hitAccuracyLevel <=
+                    defender.OffensiveStats.Accuracy - attacker.DefensiveStats.Evade)
+                {
+                    AttackMechanics(defender, attacker);
+                    hitMessage += "\nSkeleton: HIT";
+                }
+                else
+                {
+                    hitMessage += "\nSkeleton: MISS";
+                }
+            }
+
+            return hitMessage;
+        }
+        
+
         private void AttackMechanics<T>(T attacker, T defender) where T : Actor
         {
-            defender.DefensiveStats.CurrentHealth -= attacker.OffensiveStats.AttackDamage;
+            int attackPoints = attacker.OffensiveStats.AttackDamage - defender.DefensiveStats.Armor;
+            int criticalChance = _rnd.Next(0, 5);
+            switch (criticalChance)
+            {
+                case 0:
+                    break;
+                case 1:
+                    attackPoints += 1;
+                    break;
+                case 2:
+                    attackPoints -= 1;
+                    break;
+                case 3:
+                    attackPoints = attackPoints * 2;
+                    break;
+                case 4:
+                    attackPoints = (int)(attackPoints / 2);
+                    break;
+            }
+            defender.DefensiveStats.CurrentHealth -= attackPoints;
         }
 
         /// <summary>

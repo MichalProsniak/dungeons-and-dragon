@@ -1,4 +1,5 @@
 ﻿using Assets.Source.Core;
+using DungeonCrawl.Core;
 using UnityEngine;
 
 namespace DungeonCrawl.Actors.Characters
@@ -13,7 +14,7 @@ namespace DungeonCrawl.Actors.Characters
             DefensiveStats.CurrentHealth = DefensiveStats.MaxHealth;
             DefensiveStats.Armor = 0;
             DefensiveStats.Evade = 0;
-            OffensiveStats.AttackDamage = 5;
+            OffensiveStats.AttackDamage = 6;
             OffensiveStats.Accuracy = 7;
             OffensiveStats.IsWeapon = false;
         }
@@ -69,6 +70,7 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnDeath()
         {
+            ActorManager.Singleton.DestroyActor(this);
             Debug.Log("Oh no, I'm dead!");
         }
 
