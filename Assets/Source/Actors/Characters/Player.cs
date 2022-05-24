@@ -5,8 +5,10 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Player : Character
     {
+        private int _openCloseInventoryCounter = 0;
         protected override void OnUpdate(float deltaTime)
         {
+           
             if (Input.GetKeyDown(KeyCode.W))
             {
                 // Move up
@@ -33,12 +35,17 @@ namespace DungeonCrawl.Actors.Characters
 
             if (Input.GetKeyDown(KeyCode.I))
             {
-                // implement inventory to string
-                UserInterface.Singleton.SetText("INVENTORY", UserInterface.TextPosition.MiddleLeft);
-            }
-            if (Input.GetKeyDown(KeyCode.J))
-            {
-                UserInterface.Singleton.SetText("", UserInterface.TextPosition.MiddleLeft);
+                if (_openCloseInventoryCounter == 0)
+                {
+                    // implement inventory to string
+                    _openCloseInventoryCounter++;
+                    UserInterface.Singleton.SetText("INVENTORY", UserInterface.TextPosition.MiddleLeft);
+                }
+                else
+                {
+                    _openCloseInventoryCounter = 0;
+                    UserInterface.Singleton.SetText("", UserInterface.TextPosition.MiddleLeft);
+                }
             }
         }
 
