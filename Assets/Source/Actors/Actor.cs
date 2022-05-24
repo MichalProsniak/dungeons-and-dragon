@@ -1,4 +1,6 @@
-﻿using DungeonCrawl.Actors.Characters;
+﻿using Assets.Source.Actors.Items;
+using Assets.Source.Core;
+using DungeonCrawl.Actors.Characters;
 using DungeonCrawl.Actors.Static;
 using DungeonCrawl.Core;
 using UnityEngine;
@@ -48,6 +50,7 @@ namespace DungeonCrawl.Actors
             {
                 // No obstacle found, just move
                 Position = targetPosition;
+                UserInterface.Singleton.SetText("", UserInterface.TextPosition.BottomCenter);
             }
             else
             {
@@ -58,9 +61,10 @@ namespace DungeonCrawl.Actors
                     {
                         // attack
                         Position = targetPosition;
+                    }else if (actorAtTargetPosition is Item)
+                    {
+                        Position = targetPosition;
                     }
-                    
-                    // Position = targetPosition;
                 }
             }
         }
@@ -76,6 +80,8 @@ namespace DungeonCrawl.Actors
             // All actors are passable by default
             return true;
         }
+
+        
 
         /// <summary>
         ///     Invoked every animation frame, can be used for movement, character logic, etc
