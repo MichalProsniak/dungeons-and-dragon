@@ -47,7 +47,6 @@
      <Compile Include="Assets\Source\Core\CameraController.cs" />
      <Compile Include="Assets\Source\Core\UserInterface.cs" />
      <Compile Include="Assets\Source\Actors\Actor.cs" />
-     <Compile Include="Assets\Source\Actors\Items\Inventory.cs" />
      <Compile Include="Assets\Source\Actors\Characters\Player.cs" />
      <Compile Include="Assets\Source\Actors\Characters\Gargoyle.cs" />
      <Compile Include="Assets\Source\Actors\Characters\Character.cs" />
@@ -60,6 +59,9 @@
      <Compile Include="Assets\Source\Actors\Items\Item.cs" />
      <Compile Include="Assets\Source\Core\ActorManager.cs" />
      <Compile Include="Assets\Source\Actors\Characters\DefensiveStats.cs" />
+     <Compile Include="Assets\Source\Actors\Items\Inventory.cs" />
+     <Compile Include="Assets\Source\Actors\Static\Door.cs" />
+     <Compile Include="Assets\Source\Actors\Static\OpenedDoor.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -327,22 +329,22 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.3f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.3f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -711,106 +713,106 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.3f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEngineBridge.001">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
      </Reference>
      <Reference Include="PsdPlugin">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Path.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Runtime">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Runtime">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Runtime">
-     <HintPath>C:\Users\Damian\Desktop\projekty\OOP_C#\week3\TW\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+     <HintPath>C:\codecoolOOP\team\week3\dungeon-crawl-1-csharp-MichalProsniak\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

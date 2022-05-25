@@ -9,8 +9,6 @@ namespace Assets.Source.Actors.Items
     public class Inventory 
     {
         private List<string> _playerInventory = new List<string>{"Sword1","Shield" };
-        public static bool isActorOnItem;
-
         public List<string> _PlayerInventory
         {
             get { return _playerInventory; }

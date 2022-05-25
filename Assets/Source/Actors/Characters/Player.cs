@@ -1,4 +1,5 @@
-﻿using Assets.Source.Actors.Items;
+﻿using System.Collections.Generic;
+using Assets.Source.Actors.Items;
 using Assets.Source.Core;
 using DungeonCrawl.Core;
 using UnityEngine;
@@ -20,6 +21,7 @@ namespace DungeonCrawl.Actors.Characters
             OffensiveStats.AttackDamage = 30;
             OffensiveStats.Accuracy = 7;
             OffensiveStats.IsWeapon = false;
+            Inventory = new Inventory();
         }
         protected override void OnUpdate(float deltaTime)
         {
