@@ -11,8 +11,9 @@ namespace DungeonCrawl.Core
     {
         private void Start()
         {
-            
             MapLoader.LoadMap(1);
         }
+
+        public static bool Door1Opened { get; set; } = false;
     }
 }

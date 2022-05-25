@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System;
 using Assets.Source.Actors.Items;
 using Assets.Source.Core;
 using DungeonCrawl.Core;
@@ -104,13 +105,7 @@ namespace DungeonCrawl.Actors.Characters
 
         public override int DefaultSpriteId => 24;
         public override string DefaultName => "Ragnar";
-
-        private new void Awake()
-        {
-            base.Awake();
-            string message = $"NAME: {DefaultName}\nHEALTH: {DefensiveStats.CurrentHealth}";
-            UserInterface.Singleton.SetText(message, UserInterface.TextPosition.BottomLeft);
-        }
+        
 
         private void PlayerInformationInterface()
         {

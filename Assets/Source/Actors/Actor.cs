@@ -9,7 +9,8 @@ namespace DungeonCrawl.Actors
 {
     public abstract class Actor : MonoBehaviour
     {
-        public Inventory Inventory;
+        public Inventory Inventory { get; set; }
+
         public bool IsPicked { get; set; } = false;
         public (int x, int y) Position
         {
@@ -58,6 +59,27 @@ namespace DungeonCrawl.Actors
                 
                 UserInterface.Singleton.SetText("", UserInterface.TextPosition.BottomCenter);
             }
+            else if (actorAtTargetPosition is OpenedDoor)
+            {
+                Position = targetPosition;
+                ActorManager.Singleton.DestroyAllActors();
+                MapLoader.LoadMap(2);
+            }
+            else if (actorAtTargetPosition is Door)
+            {
+                if (!Inventory._PlayerInventory.Contains("Key"))
+                {
+                    UserInterface.Singleton.SetText("You have to find KEY!", UserInterface.TextPosition.TopLeft);
+                }
+                else
+                {
+                    ActorManager.Singleton.DestroyActor(actorAtTargetPosition);
+                    ActorManager.Singleton.Spawn<OpenedDoor>(actorAtTargetPosition._position);
+                    UserInterface.Singleton.SetText("You opened door!", UserInterface.TextPosition.TopLeft);
+                }
+                
+                
+            }
             else
             {
                 if (actorAtTargetPosition.OnCollision(this))
@@ -82,6 +104,7 @@ namespace DungeonCrawl.Actors
             }
             return actorAtTargetPosition;
         }
+        
 
         private string FightMechanics<T>(T attacker, T defender) where T: Actor
         {
