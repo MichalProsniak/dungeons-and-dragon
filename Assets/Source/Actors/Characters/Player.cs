@@ -1,4 +1,5 @@
-﻿using Assets.Source.Core;
+﻿using Assets.Source.Actors.Items;
+using Assets.Source.Core;
 using UnityEngine;
 
 namespace DungeonCrawl.Actors.Characters
@@ -6,6 +7,7 @@ namespace DungeonCrawl.Actors.Characters
     public class Player : Character
     {
         private int _openCloseInventoryCounter = 0;
+        private string _inventoryToString = "INVENTORY \n";
 
         public Player()
         {
@@ -19,7 +21,8 @@ namespace DungeonCrawl.Actors.Characters
         }
         protected override void OnUpdate(float deltaTime)
         {
-           
+            Inventory playerInventory = new Inventory();
+
             if (Input.GetKeyDown(KeyCode.W))
             {
                 // Move up
@@ -48,9 +51,14 @@ namespace DungeonCrawl.Actors.Characters
             {
                 if (_openCloseInventoryCounter == 0)
                 {
-                    // implement inventory to string
+                    
                     _openCloseInventoryCounter++;
-                    UserInterface.Singleton.SetText("INVENTORY", UserInterface.TextPosition.MiddleLeft);
+                    for (int i = 0; i < playerInventory._PlayerInventory.Count; i++)
+                    {
+                        _inventoryToString += playerInventory._PlayerInventory[i] + "\n";
+                    }
+                    UserInterface.Singleton.SetText(_inventoryToString, UserInterface.TextPosition.MiddleLeft);
+                    _inventoryToString = "INVENTORY \n";
                 }
                 else
                 {
@@ -58,6 +66,20 @@ namespace DungeonCrawl.Actors.Characters
                     UserInterface.Singleton.SetText("", UserInterface.TextPosition.MiddleLeft);
                 }
             }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (Inventory.isActorOnItem)
+                {
+                    UserInterface.Singleton.SetText("Item added", UserInterface.TextPosition.TopRight);
+                    // dodac item do listy 
+                    // usunac go z planszy 
+                }
+                Inventory.isActorOnItem = false;
+
+                
+
+            }
+
             PlayerInformationInterface();
             
         }
