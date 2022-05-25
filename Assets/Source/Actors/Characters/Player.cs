@@ -81,9 +81,6 @@ namespace DungeonCrawl.Actors.Characters
                     // usunac go z planszy 
                 }
                 Inventory.isActorOnItem = false;
-
-                
-
             }
 
             PlayerInformationInterface();
