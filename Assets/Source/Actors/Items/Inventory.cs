@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DungeonCrawl.Actors;
+using DungeonCrawl.Actors.Characters;
 
 namespace Assets.Source.Actors.Items
 {
@@ -17,6 +18,7 @@ namespace Assets.Source.Actors.Items
         public void Add(Actor item)
         {
             _playerInventory.Add(item);
+            
         }
 
         public int Count()

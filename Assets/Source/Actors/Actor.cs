@@ -158,6 +158,11 @@ namespace DungeonCrawl.Actors
                     attackPoints = (int)(attackPoints / 2);
                     break;
             }
+
+            if (attackPoints <= 0)
+            {
+                attackPoints = 1;
+            }
             defender.DefensiveStats.CurrentHealth -= attackPoints;
         }
 

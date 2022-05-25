@@ -20,7 +20,7 @@ namespace DungeonCrawl.Actors.Characters
             DefensiveStats.CurrentHealth = DefensiveStats.MaxHealth;
             DefensiveStats.Armor = 0;
             DefensiveStats.Evade = 0;
-            OffensiveStats.AttackDamage = 30;
+            OffensiveStats.AttackDamage = 1;
             OffensiveStats.Accuracy = 7;
             OffensiveStats.IsWeapon = false;
             Inventory = new Inventory();
@@ -28,9 +28,6 @@ namespace DungeonCrawl.Actors.Characters
         //Inventory playerInventory = new Inventory();
         protected override void OnUpdate(float deltaTime)
         {
-            
-            
-
             if (DefensiveStats.CurrentHealth <= 0)
             {
                 OnDeath();
@@ -84,6 +81,7 @@ namespace DungeonCrawl.Actors.Characters
                     _actorAtTargetPosition.IsPicked = true;
                     
                     Inventory.Add(_actorAtTargetPosition);
+                    AddStatisticsFromItem(_actorAtTargetPosition);
                     //UserInterface.Singleton.SetText(Inventory.Count().ToString(), UserInterface.TextPosition.MiddleRight);
 
 
@@ -91,6 +89,16 @@ namespace DungeonCrawl.Actors.Characters
             }
             PlayerInformationInterface();
             CameraController.Singleton.Position = Position;
+        }
+
+        private void AddStatisticsFromItem(Actor item)
+        {
+            OffensiveStats.AttackDamage += item.OffensiveStats.AttackDamage;
+            OffensiveStats.Accuracy += item.OffensiveStats.Accuracy;
+            DefensiveStats.Armor += item.DefensiveStats.Armor;
+            DefensiveStats.Evade += item.DefensiveStats.Evade;
+            DefensiveStats.CurrentHealth += item.DefensiveStats.CurrentHealth;
+            DefensiveStats.MaxHealth += item.DefensiveStats.MaxHealth;
         }
 
         public override bool OnCollision(Actor anotherActor)
