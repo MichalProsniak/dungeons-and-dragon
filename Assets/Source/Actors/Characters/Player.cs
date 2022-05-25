@@ -11,6 +11,7 @@ namespace DungeonCrawl.Actors.Characters
         private int _openCloseInventoryCounter = 0;
         private string _inventoryToString = "INVENTORY \n";
         private Actor _actorAtTargetPosition;
+        public override bool Destroyable { get; set; } = false;
 
         public Player()
         {
@@ -95,8 +96,9 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnDeath()
         {
-            ActorManager.Singleton.DestroyActor(this);
-            Debug.Log("Oh no, I'm dead!");
+            // ActorManager.Singleton.DestroyActor(this);
+            ActorManager.Singleton.DestroyAllActors();
+            UserInterface.Singleton.SetText("YOU DIED\nTHE END", UserInterface.TextPosition.MiddleCenter);
         }
 
         public override int DefaultSpriteId => 24;

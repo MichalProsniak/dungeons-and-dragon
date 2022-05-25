@@ -79,6 +79,17 @@ namespace DungeonCrawl.Core
                
         }
 
+        public void DestroyAllDestroyableActors()
+        {
+            var actors = _allActors.ToArray();
+
+            foreach (var actor in actors)
+            {
+                if (actor.Destroyable)
+                    DestroyActor(actor);
+            }
+               
+        }
         /// <summary>
         ///     Returns sprite with given ID
         /// </summary>

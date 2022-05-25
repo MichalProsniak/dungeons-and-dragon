@@ -62,7 +62,7 @@ namespace DungeonCrawl.Actors
             else if (actorAtTargetPosition is OpenedDoor)
             {
                 Position = targetPosition;
-                ActorManager.Singleton.DestroyAllActors();
+                ActorManager.Singleton.DestroyAllDestroyableActors();
                 MapLoader.LoadMap(2);
             }
             else if (actorAtTargetPosition is Door)
@@ -203,6 +203,8 @@ namespace DungeonCrawl.Actors
         ///     Default name assigned to this actor type
         /// </summary>
         public abstract string DefaultName { get; }
+
+        public virtual bool Destroyable { get; set; } = true;
         
         public DefensiveStats DefensiveStats { get; set; } = new DefensiveStats();
         public OffensiveStats OffensiveStats { get; set; } = new OffensiveStats();
