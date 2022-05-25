@@ -101,13 +101,7 @@ namespace DungeonCrawl.Actors.Characters
 
         public override int DefaultSpriteId => 24;
         public override string DefaultName => "Ragnar";
-
-        private new void Awake()
-        {
-            base.Awake();
-            string message = $"NAME: {DefaultName}\nHEALTH: {DefensiveStats.CurrentHealth}";
-            UserInterface.Singleton.SetText(message, UserInterface.TextPosition.BottomLeft);
-        }
+        
 
         private void PlayerInformationInterface()
         {
