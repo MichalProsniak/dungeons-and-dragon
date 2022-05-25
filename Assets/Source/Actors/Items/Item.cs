@@ -11,21 +11,15 @@ namespace Assets.Source.Actors.Items
 {
     public abstract class Item : Actor
     {
-        private bool _IsActorOnItem = false;
+        //public bool isActorOnItem;
         public override bool OnCollision(Actor anotherActor)
         {
             UserInterface.Singleton.SetText("Press \"E\" to pickup!", UserInterface.TextPosition.BottomCenter);
+            Inventory.isActorOnItem = true;
             return true;
         }
 
-        
-
-
         private (int x, int y) _position;
-        //public void IsPickable()
-        //{
-
-
-        //}
+        public override int Z => -1;
     }
 }
