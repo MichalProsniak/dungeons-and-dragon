@@ -9,6 +9,7 @@ namespace DungeonCrawl.Actors
 {
     public abstract class Actor : MonoBehaviour
     {
+        public Inventory Inventory;
         public bool IsPicked { get; set; } = false;
         public (int x, int y) Position
         {
