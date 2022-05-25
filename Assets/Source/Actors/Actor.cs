@@ -67,7 +67,7 @@ namespace DungeonCrawl.Actors
             }
             else if (actorAtTargetPosition is Door)
             {
-                if (!Inventory._PlayerInventory.Contains("Key"))
+                if (!Inventory.IsKeyInInventory())
                 {
                     UserInterface.Singleton.SetText("You have to find KEY!", UserInterface.TextPosition.TopLeft);
                 }

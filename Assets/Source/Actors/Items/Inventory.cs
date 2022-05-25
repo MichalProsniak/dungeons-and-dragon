@@ -38,5 +38,17 @@ namespace Assets.Source.Actors.Items
             }
             return stringList;
         }
+
+        public bool IsKeyInInventory()
+        {
+            for (int i = 0; i < _playerInventory.Count(); i++)
+            {
+                if (_playerInventory[i].DefaultName == "Key")
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
