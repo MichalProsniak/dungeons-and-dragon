@@ -56,7 +56,6 @@ namespace DungeonCrawl.Actors
                 Position = targetPosition;
                 UserInterface.Singleton.SetText("", UserInterface.TextPosition.TopLeft);
                 UserInterface.Singleton.SetText("", UserInterface.TextPosition.MiddleCenter);
-                
                 UserInterface.Singleton.SetText("", UserInterface.TextPosition.BottomCenter);
             }
             else if (actorAtTargetPosition is OpenedDoor)
