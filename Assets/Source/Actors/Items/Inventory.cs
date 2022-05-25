@@ -11,7 +11,6 @@ namespace Assets.Source.Actors.Items
     public class Inventory
     {
         private List<Actor> _playerInventory = new List<Actor>();
-        public static bool isActorOnItem;
         private int _bonusAD;
         private int _bonusHP;
 

@@ -91,7 +91,6 @@ namespace DungeonCrawl.Actors.Characters
         {
             // ActorManager actorManager = new ActorManager();
             ActorManager.Singleton.DestroyActor(this);
-            Debug.Log("Well, I was already dead anyway...");
         }
 
         public override int DefaultSpriteId => 314;
