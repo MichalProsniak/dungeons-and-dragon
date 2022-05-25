@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DungeonCrawl.Actors;
+using DungeonCrawl.Actors.Characters;
 using UnityEngine;
 using UnityEngine.U2D;
 
@@ -72,7 +73,10 @@ namespace DungeonCrawl.Core
             var actors = _allActors.ToArray();
 
             foreach (var actor in actors)
+            {
                 DestroyActor(actor);
+            }
+               
         }
 
         /// <summary>

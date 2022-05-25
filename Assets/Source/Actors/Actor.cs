@@ -50,7 +50,7 @@ namespace DungeonCrawl.Actors
 
             var actorAtTargetPosition = ActorManager.Singleton.GetActorAt(targetPosition);
 
-            if (actorAtTargetPosition == null || actorAtTargetPosition is OpenedDoor)
+            if (actorAtTargetPosition == null)
             {
                 // No obstacle found, just move
                 Position = targetPosition;
@@ -58,6 +58,12 @@ namespace DungeonCrawl.Actors
                 UserInterface.Singleton.SetText("", UserInterface.TextPosition.MiddleCenter);
                 
                 UserInterface.Singleton.SetText("", UserInterface.TextPosition.BottomCenter);
+            }
+            else if (actorAtTargetPosition is OpenedDoor)
+            {
+                Position = targetPosition;
+                ActorManager.Singleton.DestroyAllActors();
+                MapLoader.LoadMap(2);
             }
             else if (actorAtTargetPosition is Door)
             {
