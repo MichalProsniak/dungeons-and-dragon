@@ -21,11 +21,7 @@ namespace Assets.Source.Actors.Items
             DefensiveStats.CurrentHealth = 0;
             DefensiveStats.MaxHealth = 0;
         }
-
-
-
     }
-    
 }
 
 

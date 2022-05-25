@@ -4,10 +4,6 @@
     {
         public override int DefaultSpriteId => 559;
         public override string DefaultName => "Key";
-        private int _AD = 1000;
-
-
-
     }
 
 }

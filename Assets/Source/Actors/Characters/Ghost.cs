@@ -9,6 +9,7 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Ghost : Character
     {
+        private ActorManager _actorManager = ActorManager.Singleton;
         public Ghost()
         {
             DefensiveStats.MaxHealth = 20;
@@ -26,9 +27,9 @@ namespace DungeonCrawl.Actors.Characters
             {
                 OnDeath();
             }
-
+            
             movementCounter++;
-            if (movementCounter == 120)
+            if (movementCounter == 240)
             {
                 var lines = Regex.Split(Resources.Load<TextAsset>($"map_1").text, "\r\n|\r|\n");
                 var split = lines[0].Split(' ');
@@ -36,8 +37,12 @@ namespace DungeonCrawl.Actors.Characters
                 var height = int.Parse(split[1]);
                 var targetPosition = GetCorrectNewPosition(width, height);
                 var actorAtTargetPosition = ActorManager.Singleton.GetActorAt(targetPosition);
-
-                if (actorAtTargetPosition == null || actorAtTargetPosition is Wall)
+                
+                if (IsPlayerNear())
+                {
+                    FollowPlayer();
+                }
+                else if (actorAtTargetPosition == null || actorAtTargetPosition is Wall)
                 {
                     // No obstacle found, just move
                     Position = targetPosition;
@@ -45,8 +50,17 @@ namespace DungeonCrawl.Actors.Characters
 
                 movementCounter = 0;
             }
-           
+        }
 
+        public override bool IsPlayerNear()
+        {
+            if (_actorManager.player.Position.x - Position.x < 4 && _actorManager.player.Position.y - Position.y < 4 && 
+                _actorManager.player.Position.x - Position.x > -4 && _actorManager.player.Position.y - Position.y > -4)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private (int, int) GetCorrectNewPosition(int width, int height)
@@ -95,5 +109,38 @@ namespace DungeonCrawl.Actors.Characters
 
         public override int DefaultSpriteId => 314;
         public override string DefaultName => "Ghost";
+
+        private void FollowPlayer()
+        {
+            if (_actorManager.player.Position.x > Position.x)
+            {
+                if (ActorManager.Singleton.GetActorAt((Position.x + 1, Position.y)) is not Player)
+                {
+                    Position = (Position.x + 1, Position.y);
+                }
+            }
+            else if (_actorManager.player.Position.x < Position.x)
+            {
+                if (ActorManager.Singleton.GetActorAt((Position.x - 1, Position.y)) is not Player)
+                {
+                    Position = (Position.x - 1, Position.y);
+                }
+            }
+            else if (_actorManager.player.Position.y < Position.y)
+            {
+                if (ActorManager.Singleton.GetActorAt((Position.x, Position.y - 1)) is not Player)
+                {
+                    Position = (Position.x, Position.y - 1);
+                }
+            }
+            else if (_actorManager.player.Position.y > Position.y)
+            {
+                if (ActorManager.Singleton.GetActorAt((Position.x, Position.y + 1)) is not Player)
+                {
+                    Position = (Position.x, Position.y + 1);
+                }
+            }
+        }
+        
     }
 }
