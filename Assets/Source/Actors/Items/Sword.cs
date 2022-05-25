@@ -10,10 +10,12 @@ namespace Assets.Source.Actors.Items
     {
         public override int DefaultSpriteId => 415;
         public override string DefaultName => "Sword";
+        private int _AD = 1000;
+
+
 
     }
     
 }
 
 
-// kalsa inv z lista , dodanie pod e itemow , wyswitlenie itemow 

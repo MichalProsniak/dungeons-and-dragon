@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 using Assets.Source.Actors.Items;
 using Assets.Source.Core;
 using DungeonCrawl.Core;
@@ -24,9 +25,10 @@ namespace DungeonCrawl.Actors.Characters
             OffensiveStats.IsWeapon = false;
             Inventory = new Inventory();
         }
+        //Inventory playerInventory = new Inventory();
         protected override void OnUpdate(float deltaTime)
         {
-            Inventory playerInventory = new Inventory();
+            
             
 
             if (DefensiveStats.CurrentHealth <= 0)
@@ -65,11 +67,8 @@ namespace DungeonCrawl.Actors.Characters
                 {
                     
                     _openCloseInventoryCounter++;
-                    for (int i = 0; i < playerInventory._PlayerInventory.Count; i++)
-                    {
-                        _inventoryToString += playerInventory._PlayerInventory[i] + "\n";
-                    }
-                    UserInterface.Singleton.SetText(_inventoryToString, UserInterface.TextPosition.MiddleLeft);
+                    
+                    UserInterface.Singleton.SetText(Inventory.ToString(), UserInterface.TextPosition.MiddleLeft);
                     _inventoryToString = "INVENTORY \n";
                 }
                 else
@@ -83,6 +82,11 @@ namespace DungeonCrawl.Actors.Characters
                 if (_actorAtTargetPosition is Item)
                 {
                     _actorAtTargetPosition.IsPicked = true;
+                    
+                    Inventory.Add(_actorAtTargetPosition);
+                    //UserInterface.Singleton.SetText(Inventory.Count().ToString(), UserInterface.TextPosition.MiddleRight);
+
+
                 }
             }
             PlayerInformationInterface();
