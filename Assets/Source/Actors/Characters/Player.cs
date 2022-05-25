@@ -9,6 +9,7 @@ namespace DungeonCrawl.Actors.Characters
     {
         private int _openCloseInventoryCounter = 0;
         private string _inventoryToString = "INVENTORY \n";
+        private Actor _actorAtTargetPosition;
 
         public Player()
         {
@@ -23,6 +24,7 @@ namespace DungeonCrawl.Actors.Characters
         protected override void OnUpdate(float deltaTime)
         {
             Inventory playerInventory = new Inventory();
+            
 
             if (DefensiveStats.CurrentHealth <= 0)
             {
@@ -32,25 +34,26 @@ namespace DungeonCrawl.Actors.Characters
             if (Input.GetKeyDown(KeyCode.W))
             {
                 // Move up
-                TryMove(Direction.Up);
+                _actorAtTargetPosition = TryMove(Direction.Up);
             }
 
             if (Input.GetKeyDown(KeyCode.S))
             {
                 // Move down
-                TryMove(Direction.Down);
+                _actorAtTargetPosition = TryMove(Direction.Down);
+                // UserInterface.Singleton.SetText($"Press \"E\" to pickup!\n {_actorAtTargetPosition}", UserInterface.TextPosition.BottomCenter);
             }
 
             if (Input.GetKeyDown(KeyCode.A))
             {
                 // Move left
-                TryMove(Direction.Left);
+                _actorAtTargetPosition = TryMove(Direction.Left);
             }
 
             if (Input.GetKeyDown(KeyCode.D))
             {
                 // Move right
-                TryMove(Direction.Right);
+                _actorAtTargetPosition = TryMove(Direction.Right);
             }
 
             if (Input.GetKeyDown(KeyCode.I))
@@ -74,17 +77,13 @@ namespace DungeonCrawl.Actors.Characters
             }
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (Inventory.isActorOnItem)
+                if (_actorAtTargetPosition is Item)
                 {
-                    UserInterface.Singleton.SetText("Item added", UserInterface.TextPosition.TopRight);
-                    // dodac item do listy 
-                    // usunac go z planszy 
+                    _actorAtTargetPosition.IsPicked = true;
                 }
-                Inventory.isActorOnItem = false;
             }
-
             PlayerInformationInterface();
-            
+            CameraController.Singleton.Position = Position;
         }
 
         public override bool OnCollision(Actor anotherActor)

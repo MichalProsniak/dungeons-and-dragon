@@ -9,6 +9,7 @@ namespace DungeonCrawl.Actors
 {
     public abstract class Actor : MonoBehaviour
     {
+        public bool IsPicked { get; set; } = false;
         public (int x, int y) Position
         {
             get => _position;
@@ -40,7 +41,7 @@ namespace DungeonCrawl.Actors
         }
         private System.Random _rnd = new System.Random();
 
-        public void TryMove(Direction direction)
+        public Actor TryMove(Direction direction)
         {
             var vector = direction.ToVector();
             (int x, int y) targetPosition = (Position.x + vector.x, Position.y + vector.y);
@@ -71,12 +72,14 @@ namespace DungeonCrawl.Actors
                             UserInterface.TextPosition.TopLeft);
                         UserInterface.Singleton.SetText(hitMessage,
                             UserInterface.TextPosition.BottomCenter);
-                    }else if (actorAtTargetPosition is Item)
+                    }
+                    else if (actorAtTargetPosition is Item)
                     {
                         Position = targetPosition;
                     }
                 }
             }
+            return actorAtTargetPosition;
         }
 
         private string FightMechanics<T>(T attacker, T defender) where T: Actor
