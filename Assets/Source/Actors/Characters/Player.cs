@@ -87,7 +87,7 @@ namespace DungeonCrawl.Actors.Characters
             }
 
             PlayerInformationInterface();
-            
+            CameraController.Singleton.Position = Position;
         }
 
         public override bool OnCollision(Actor anotherActor)
