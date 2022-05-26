@@ -31,7 +31,7 @@ namespace DungeonCrawl.Actors.Characters
             movementCounter++;
             if (movementCounter == 240)
             {
-                var lines = Regex.Split(Resources.Load<TextAsset>($"map_1").text, "\r\n|\r|\n");
+                var lines = Regex.Split(Resources.Load<TextAsset>($"map_2").text, "\r\n|\r|\n");
                 var split = lines[0].Split(' ');
                 var width = int.Parse(split[0]);
                 var height = int.Parse(split[1]);
