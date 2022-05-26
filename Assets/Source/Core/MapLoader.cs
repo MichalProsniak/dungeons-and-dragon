@@ -114,6 +114,9 @@ namespace DungeonCrawl.Core
                 case 'R':
                     ActorManager.Singleton.Spawn<RiverFilling>(position);
                     break;
+                case 'C':
+                    ActorManager.Singleton.Spawn<Column>(position);
+                    break;
                 case ' ':
                     break;
                 default:
