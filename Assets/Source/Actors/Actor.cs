@@ -66,6 +66,14 @@ namespace DungeonCrawl.Actors
                 ActorManager.Singleton.DestroyAllDestroyableActors();
                 MapLoader.LoadMap(2);
             }
+            else if (actorAtTargetPosition is OpenDoor2)
+            {
+                Position = targetPosition;
+                ActorManager.Singleton.DestroyAllDestroyableActors();
+                // MapLoader.LoadMap(3);
+                UserInterface.Singleton.SetText("LVL 3!", UserInterface.TextPosition.MiddleCenter);
+                
+            }
             else if (actorAtTargetPosition is Door)
             {
                 if (!Inventory.IsKeyInInventory())
@@ -75,7 +83,7 @@ namespace DungeonCrawl.Actors
                 else
                 {
                     ActorManager.Singleton.DestroyActor(actorAtTargetPosition);
-                    ActorManager.Singleton.Spawn<OpenedDoor>(actorAtTargetPosition._position);
+                    ActorManager.Singleton.Spawn<OpenDoor2>(actorAtTargetPosition._position);
                     UserInterface.Singleton.SetText("You opened door!", UserInterface.TextPosition.TopLeft);
                 }
                 

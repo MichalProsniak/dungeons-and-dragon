@@ -1,6 +1,8 @@
-﻿namespace DungeonCrawl.Actors.Static
+﻿using Assets.Source.Actors.Items;
+
+namespace DungeonCrawl.Actors.Static
 {
-    public class Armor : Actor
+    public class Armor : Item
     {
         public override int DefaultSpriteId => 80;
         public override string DefaultName => "Armor";
