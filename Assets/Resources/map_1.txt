@@ -1,51 +1,41 @@
-50 50
-######D#########    ################   ###########
-#.p............#    #..............#   #.........#
-#....K.........#    #..............#   #.........#
-#..............#    #..............#   #.........#
-#..............#    #..............#   #.........#
-#..............#    #..............#   #.........#
-#..............######..............#   #.........#
-#..................................#   #.........#
-#..............######..............#   #.........#
-#..............#    #..............#   #.........#
-#..............#    #..............#   #.........#
-#..............#    #..............#   #.........#
-#..............#    #######..#######   ######.####
-#..............#          #..#              #.#   
-#..............#          #..#              #.#   
-##..#######################..####           #.#   
-#..............#................#           #.#   
-#..............#................#  ##########.####
-#..............#................#  #.............#
-#..............#................#  #.............#
-#..............#................#  #.............#
-#..............#................#  #.............#
-#..............#................#  #.............#
-#..............#................#  #.............#
-#..............#.K..............#  #.............#
-#..............##################  #####..########
-#..............#                       #..#       
-#..............#                       #..#       
-#..............#                       #..#       
-#..............#  ######################..########
-############.###  #..............................#
-           #.#    #..............................#
-           #.#    #..###########.................#
-############.###  #..#         #.................#
-#..............#  #..#         #.................#
-#..............#  #..#         #.................#
-#..............#  #..#         #.................#
-#..............#  #..#         #.................#
-#..............#  #..#         #.................#
-#..............#  #..#         #.................#
-#..............#  #..#         #.................#
-#..............#  #..#         #.................#
-#..............#  #..#         #.................#
-#..............#  #..#         #.................#
-#..............#  #..#         #.................#
-#..............####..#         #.................#
-#....................#         #.................#
-#....................#         #.................#
-#..............#######         #.................#
-################               #################D#
+50 40
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTT122223ZZZZZZZZZZZZZZZTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTRRRRTZZZZZZZZZZZZZZZTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTRRRRTZZZZZZZZZZZZZZZTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTRRRRTZZZZZZZZZZZZZZZTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTRRRRTZZZZZZZZZZZZZZZTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTZZZZZZZZZZZZZZZTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTZZZZZZZZZZZZZZZTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTZZZZZZZZZZZpZZZTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTZZZZZZZZZZZZZZZTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

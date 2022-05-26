@@ -5,5 +5,7 @@
         public override int DefaultSpriteId => 730;
         public override string DefaultName => "MiddleBridge"; 
         public override bool Detectable => false;
+        public override int Z => -1;
     }
+    
 }
