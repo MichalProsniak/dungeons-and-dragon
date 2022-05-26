@@ -19,6 +19,7 @@ namespace DungeonCrawl.Core
 
         private SpriteAtlas _spriteAtlas;
         private HashSet<Actor> _allActors;
+        public Actor player;
 
         private void Awake()
         {
@@ -79,6 +80,17 @@ namespace DungeonCrawl.Core
                
         }
 
+        public void DestroyAllDestroyableActors()
+        {
+            var actors = _allActors.ToArray();
+
+            foreach (var actor in actors)
+            {
+                if (actor.Destroyable)
+                    DestroyActor(actor);
+            }
+               
+        }
         /// <summary>
         ///     Returns sprite with given ID
         /// </summary>
@@ -120,6 +132,10 @@ namespace DungeonCrawl.Core
             component.Position = (x, y);
 
             _allActors.Add(component);
+            if (component is Player)
+            {
+                player = component;
+            }
 
             return component;
         }

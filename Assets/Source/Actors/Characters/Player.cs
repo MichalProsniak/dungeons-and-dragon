@@ -10,8 +10,8 @@ namespace DungeonCrawl.Actors.Characters
     public class Player : Character
     {
         private int _openCloseInventoryCounter = 0;
-        private string _inventoryToString = "INVENTORY \n";
         private Actor _actorAtTargetPosition;
+        public override bool Destroyable { get; set; } = false;
 
         public Player()
         {
@@ -19,7 +19,7 @@ namespace DungeonCrawl.Actors.Characters
             DefensiveStats.CurrentHealth = DefensiveStats.MaxHealth;
             DefensiveStats.Armor = 0;
             DefensiveStats.Evade = 0;
-            OffensiveStats.AttackDamage = 30;
+            OffensiveStats.AttackDamage = 1;
             OffensiveStats.Accuracy = 7;
             OffensiveStats.IsWeapon = false;
             Inventory = new Inventory();
@@ -27,9 +27,6 @@ namespace DungeonCrawl.Actors.Characters
         //Inventory playerInventory = new Inventory();
         protected override void OnUpdate(float deltaTime)
         {
-            
-            
-
             if (DefensiveStats.CurrentHealth <= 0)
             {
                 OnDeath();
@@ -45,7 +42,6 @@ namespace DungeonCrawl.Actors.Characters
             {
                 // Move down
                 _actorAtTargetPosition = TryMove(Direction.Down);
-                // UserInterface.Singleton.SetText($"Press \"E\" to pickup!\n {_actorAtTargetPosition}", UserInterface.TextPosition.BottomCenter);
             }
 
             if (Input.GetKeyDown(KeyCode.A))
@@ -64,11 +60,8 @@ namespace DungeonCrawl.Actors.Characters
             {
                 if (_openCloseInventoryCounter == 0)
                 {
-                    
                     _openCloseInventoryCounter++;
-                    
                     UserInterface.Singleton.SetText(Inventory.ToString(), UserInterface.TextPosition.MiddleLeft);
-                    _inventoryToString = "INVENTORY \n";
                 }
                 else
                 {
@@ -83,13 +76,22 @@ namespace DungeonCrawl.Actors.Characters
                     _actorAtTargetPosition.IsPicked = true;
                     
                     Inventory.Add(_actorAtTargetPosition);
+                    AddStatisticsFromItem(_actorAtTargetPosition);
                     //UserInterface.Singleton.SetText(Inventory.Count().ToString(), UserInterface.TextPosition.MiddleRight);
-
-
                 }
             }
             PlayerInformationInterface();
             CameraController.Singleton.Position = Position;
+        }
+
+        private void AddStatisticsFromItem(Actor item)
+        {
+            OffensiveStats.AttackDamage += item.OffensiveStats.AttackDamage;
+            OffensiveStats.Accuracy += item.OffensiveStats.Accuracy;
+            DefensiveStats.Armor += item.DefensiveStats.Armor;
+            DefensiveStats.Evade += item.DefensiveStats.Evade;
+            DefensiveStats.CurrentHealth += item.DefensiveStats.CurrentHealth;
+            DefensiveStats.MaxHealth += item.DefensiveStats.MaxHealth;
         }
 
         public override bool OnCollision(Actor anotherActor)
@@ -99,8 +101,8 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnDeath()
         {
-            ActorManager.Singleton.DestroyActor(this);
-            Debug.Log("Oh no, I'm dead!");
+            ActorManager.Singleton.DestroyAllActors();
+            UserInterface.Singleton.SetText("YOU DIED\nTHE END", UserInterface.TextPosition.MiddleCenter);
         }
 
         public override int DefaultSpriteId => 24;

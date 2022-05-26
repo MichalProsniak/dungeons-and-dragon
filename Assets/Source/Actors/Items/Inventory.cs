@@ -4,19 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DungeonCrawl.Actors;
+using DungeonCrawl.Actors.Characters;
 
 namespace Assets.Source.Actors.Items
 {
     public class Inventory
     {
         private List<Actor> _playerInventory = new List<Actor>();
-        public static bool isActorOnItem;
         private int _bonusAD;
         private int _bonusHP;
 
         public void Add(Actor item)
         {
             _playerInventory.Add(item);
+            
         }
 
         public int Count()

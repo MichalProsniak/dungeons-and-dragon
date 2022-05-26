@@ -84,7 +84,7 @@ namespace DungeonCrawl.Actors.Characters
             }
         }
 
-        public bool IsPlayerNear()
+        public override bool IsPlayerNear()
         {
             (int x, int y) targetPositionDown = (Position.x + 1, Position.y);
             (int x, int y) targetPositionUp = (Position.x - 1, Position.y);
@@ -107,7 +107,6 @@ namespace DungeonCrawl.Actors.Characters
         protected override void OnDeath()
         {
             ActorManager.Singleton.DestroyActor(this);
-            Debug.Log("Well, I was already dead anyway...");
         }
 
         public override int DefaultSpriteId => 316;
