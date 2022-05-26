@@ -75,8 +75,12 @@
      <Compile Include="Assets\Source\Core\ActorManager.cs" />
      <Compile Include="Assets\Source\Actors\Characters\DefensiveStats.cs" />
      <Compile Include="Assets\Source\Actors\Static\OpenDoor2.cs" />
+     <Compile Include="Assets\Source\Actors\Static\Column.cs" />
+     <Compile Include="Assets\Source\Actors\Static\Grass.cs" />
+     <Compile Include="Assets\Source\Actors\Static\HidenTree.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Resources\map_3.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
