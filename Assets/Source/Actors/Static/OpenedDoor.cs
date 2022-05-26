@@ -2,7 +2,7 @@
 {
     public class OpenedDoor : Actor
     {
-        public override int DefaultSpriteId => 539;
+        public override int DefaultSpriteId => 290;
         public override string DefaultName => "OpenedDoor";
         
     }
