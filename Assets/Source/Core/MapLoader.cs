@@ -81,18 +81,19 @@ namespace DungeonCrawl.Core
                     break;
                 case 'H':
                     ActorManager.Singleton.Spawn<Apple>(position);
-                    ActorManager.Singleton.Spawn<Grass>(position);
+                    ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 'A':
                     ActorManager.Singleton.Spawn<Armor>(position);
-                    ActorManager.Singleton.Spawn<Grass>(position);
+                    ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 'f':
                     ActorManager.Singleton.Spawn<CampFire>(position);
+                    ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 'F':
                     ActorManager.Singleton.Spawn<Torch>(position);
-                    
+                    ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 'T':
                     ActorManager.Singleton.Spawn<DoubleTree>(position);
@@ -121,6 +122,9 @@ namespace DungeonCrawl.Core
                     break;
                 case '5':
                     ActorManager.Singleton.Spawn<HidenTree>(position);
+                    break;
+                case 'C':
+                    ActorManager.Singleton.Spawn<Column>(position);
                     break;
                 case ' ':
                     break;
