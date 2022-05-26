@@ -54,7 +54,7 @@ namespace DungeonCrawl.Core
                     break;
                 case 'p':
                     ActorManager.Singleton.Spawn<Player>(position);
-                    ActorManager.Singleton.Spawn<Floor>(position);
+                    ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case 's':
                     ActorManager.Singleton.Spawn<Skeleton>(position);
@@ -106,13 +106,16 @@ namespace DungeonCrawl.Core
                     break;
                 case '2':
                     ActorManager.Singleton.Spawn<MiddleBridge>(position);
-                    ActorManager.Singleton.Spawn<RiverFilling>(position);
+                    
                     break;
                 case '3':
                     ActorManager.Singleton.Spawn<RightBridge>(position);
                     break;
                 case 'R':
                     ActorManager.Singleton.Spawn<RiverFilling>(position);
+                    break;
+                case 'Z':
+                    ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case ' ':
                     break;
