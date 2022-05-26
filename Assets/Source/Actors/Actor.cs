@@ -68,8 +68,8 @@ namespace DungeonCrawl.Actors
             {
                 Position = targetPosition;
                 ActorManager.Singleton.DestroyAllDestroyableActors();
-                // MapLoader.LoadMap(3);
-                UserInterface.Singleton.SetText("LVL 3!", UserInterface.TextPosition.MiddleCenter);
+                MapLoader.LoadMap(3);
+                // UserInterface.Singleton.SetText("LVL 3!", UserInterface.TextPosition.MiddleCenter);
                 
             }
             else if (actorAtTargetPosition is Door)
@@ -94,7 +94,9 @@ namespace DungeonCrawl.Actors
                     // Allowed to move
                     if (actorAtTargetPosition is Skeleton || 
                         actorAtTargetPosition is Gargoyle || 
-                        actorAtTargetPosition is Ghost)
+                        actorAtTargetPosition is Ghost || 
+                        actorAtTargetPosition is Dragon ||
+                        actorAtTargetPosition is Bat)
                     {
                         // attack
                         string hitMessage = FightMechanics(this, actorAtTargetPosition);

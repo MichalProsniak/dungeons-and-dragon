@@ -13,7 +13,7 @@ namespace DungeonCrawl.Actors.Characters
             DefensiveStats.Armor = 3;
             DefensiveStats.Evade = 2;
             OffensiveStats.AttackDamage = 6;
-            OffensiveStats.Accuracy = 6;
+            OffensiveStats.Accuracy = 7;
             OffensiveStats.IsWeapon = false;
         }
         protected override void OnUpdate(float deltaTime)
