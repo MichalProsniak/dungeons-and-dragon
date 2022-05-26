@@ -64,6 +64,8 @@
      <Compile Include="Assets\Source\Actors\Items\Item.cs" />
      <Compile Include="Assets\Source\Core\ActorManager.cs" />
      <Compile Include="Assets\Source\Actors\Characters\DefensiveStats.cs" />
+     <Compile Include="Assets\Source\Actors\Characters\Dragon.cs" />
+     <Compile Include="Assets\Source\Actors\Items\Key.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

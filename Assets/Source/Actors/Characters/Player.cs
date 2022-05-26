@@ -10,7 +10,6 @@ namespace DungeonCrawl.Actors.Characters
     public class Player : Character
     {
         private int _openCloseInventoryCounter = 0;
-        private string _inventoryToString = "INVENTORY \n";
         private Actor _actorAtTargetPosition;
         public override bool Destroyable { get; set; } = false;
 
@@ -43,7 +42,6 @@ namespace DungeonCrawl.Actors.Characters
             {
                 // Move down
                 _actorAtTargetPosition = TryMove(Direction.Down);
-                // UserInterface.Singleton.SetText($"Press \"E\" to pickup!\n {_actorAtTargetPosition}", UserInterface.TextPosition.BottomCenter);
             }
 
             if (Input.GetKeyDown(KeyCode.A))
@@ -62,11 +60,8 @@ namespace DungeonCrawl.Actors.Characters
             {
                 if (_openCloseInventoryCounter == 0)
                 {
-                    
                     _openCloseInventoryCounter++;
-                    
                     UserInterface.Singleton.SetText(Inventory.ToString(), UserInterface.TextPosition.MiddleLeft);
-                    _inventoryToString = "INVENTORY \n";
                 }
                 else
                 {
@@ -83,8 +78,6 @@ namespace DungeonCrawl.Actors.Characters
                     Inventory.Add(_actorAtTargetPosition);
                     AddStatisticsFromItem(_actorAtTargetPosition);
                     //UserInterface.Singleton.SetText(Inventory.Count().ToString(), UserInterface.TextPosition.MiddleRight);
-
-
                 }
             }
             PlayerInformationInterface();
@@ -108,7 +101,6 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnDeath()
         {
-            // ActorManager.Singleton.DestroyActor(this);
             ActorManager.Singleton.DestroyAllActors();
             UserInterface.Singleton.SetText("YOU DIED\nTHE END", UserInterface.TextPosition.MiddleCenter);
         }

@@ -188,6 +188,11 @@ namespace DungeonCrawl.Actors
         {
         }
 
+        public virtual bool IsPlayerNear()
+        {
+            return false;
+        }
+
         /// <summary>
         ///     Can this actor be detected with ActorManager.GetActorAt()? Should be false for purely cosmetic actors
         /// </summary>
