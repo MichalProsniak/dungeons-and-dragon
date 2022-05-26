@@ -114,28 +114,32 @@ namespace DungeonCrawl.Actors.Characters
         {
             if (_actorManager.player.Position.x > Position.x)
             {
-                if (ActorManager.Singleton.GetActorAt((Position.x + 1, Position.y)) is not Player)
+                if (ActorManager.Singleton.GetActorAt((Position.x + 1, Position.y)) == null|| 
+                    ActorManager.Singleton.GetActorAt((Position.x - 1, Position.y)) is Wall)
                 {
                     Position = (Position.x + 1, Position.y);
                 }
             }
             else if (_actorManager.player.Position.x < Position.x)
             {
-                if (ActorManager.Singleton.GetActorAt((Position.x - 1, Position.y)) is not Player)
+                if (ActorManager.Singleton.GetActorAt((Position.x - 1, Position.y)) == null || 
+                    ActorManager.Singleton.GetActorAt((Position.x - 1, Position.y)) is Wall)
                 {
                     Position = (Position.x - 1, Position.y);
                 }
             }
             else if (_actorManager.player.Position.y < Position.y)
             {
-                if (ActorManager.Singleton.GetActorAt((Position.x, Position.y - 1)) is not Player)
+                if (ActorManager.Singleton.GetActorAt((Position.x, Position.y - 1)) == null|| 
+                    ActorManager.Singleton.GetActorAt((Position.x - 1, Position.y)) is Wall)
                 {
                     Position = (Position.x, Position.y - 1);
                 }
             }
             else if (_actorManager.player.Position.y > Position.y)
             {
-                if (ActorManager.Singleton.GetActorAt((Position.x, Position.y + 1)) is not Player)
+                if (ActorManager.Singleton.GetActorAt((Position.x, Position.y + 1)) == null|| 
+                    ActorManager.Singleton.GetActorAt((Position.x - 1, Position.y)) is Wall)
                 {
                     Position = (Position.x, Position.y + 1);
                 }
