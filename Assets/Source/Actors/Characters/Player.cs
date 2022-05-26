@@ -27,6 +27,11 @@ namespace DungeonCrawl.Actors.Characters
         //Inventory playerInventory = new Inventory();
         protected override void OnUpdate(float deltaTime)
         {
+            if (DefensiveStats.CurrentHealth > DefensiveStats.MaxHealth)
+            {
+                DefensiveStats.CurrentHealth = DefensiveStats.MaxHealth;
+            }
+            
             if (DefensiveStats.CurrentHealth <= 0)
             {
                 OnDeath();
@@ -72,7 +77,10 @@ namespace DungeonCrawl.Actors.Characters
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (_actorAtTargetPosition is Item)
-                {
+                {   if (_actorAtTargetPosition is Sword)
+                    {
+                        SetSprite(27);
+                    }
                     _actorAtTargetPosition.IsPicked = true;
                     
                     Inventory.Add(_actorAtTargetPosition);
@@ -111,7 +119,7 @@ namespace DungeonCrawl.Actors.Characters
 
         private void PlayerInformationInterface()
         {
-            string message = $"NAME: {DefaultName}\nHEALTH: {DefensiveStats.CurrentHealth}";
+            string message = $"NAME: {DefaultName}\nHEALTH: {DefensiveStats.CurrentHealth}\\{DefensiveStats.MaxHealth}";
             UserInterface.Singleton.SetText(message, UserInterface.TextPosition.BottomLeft);
         }
     }

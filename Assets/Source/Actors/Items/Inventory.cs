@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DungeonCrawl.Actors;
 using DungeonCrawl.Actors.Characters;
+using DungeonCrawl.Actors.Static;
 
 namespace Assets.Source.Actors.Items
 {
@@ -16,7 +17,11 @@ namespace Assets.Source.Actors.Items
 
         public void Add(Actor item)
         {
-            _playerInventory.Add(item);
+            if (!item.Consumable )
+            {
+                _playerInventory.Add(item); 
+            }
+            
             
         }
 

@@ -66,21 +66,6 @@ namespace DungeonCrawl.Actors.Characters
                     // No obstacle found, just move
                     Position = targetPosition;
                 }
-                else
-                {
-                    if (actorAtTargetPosition.OnCollision(this))
-                    {
-                        // Allowed to move
-                        if (actorAtTargetPosition is Skeleton)
-                        {
-                            Position = targetPosition;
-                        }
-                        else if (actorAtTargetPosition is Item)
-                        {
-                            Position = targetPosition;
-                        }
-                    }
-                }
             }
         }
 

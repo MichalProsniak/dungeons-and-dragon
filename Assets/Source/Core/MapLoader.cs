@@ -79,6 +79,41 @@ namespace DungeonCrawl.Core
                     ActorManager.Singleton.Spawn<Key>(position);
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
+                case 'H':
+                    ActorManager.Singleton.Spawn<Apple>(position);
+                    ActorManager.Singleton.Spawn<Floor>(position);
+                    break;
+                case 'A':
+                    ActorManager.Singleton.Spawn<Armor>(position);
+                    ActorManager.Singleton.Spawn<Floor>(position);
+                    break;
+                case 'f':
+                    ActorManager.Singleton.Spawn<CampFire>(position);
+                    ActorManager.Singleton.Spawn<Floor>(position);
+                    break;
+                case 'F':
+                    ActorManager.Singleton.Spawn<Torch>(position);
+                    ActorManager.Singleton.Spawn<Floor>(position);
+                    break;
+                case 'T':
+                    ActorManager.Singleton.Spawn<DoubleTree>(position);
+                    break;
+                case 't':
+                    ActorManager.Singleton.Spawn<SingleTree>(position);
+                    break;
+                case '1':
+                    ActorManager.Singleton.Spawn<LeftBridge>(position);
+                    break;
+                case '2':
+                    ActorManager.Singleton.Spawn<MiddleBridge>(position);
+                    ActorManager.Singleton.Spawn<RiverFilling>(position);
+                    break;
+                case '3':
+                    ActorManager.Singleton.Spawn<RightBridge>(position);
+                    break;
+                case 'R':
+                    ActorManager.Singleton.Spawn<RiverFilling>(position);
+                    break;
                 case ' ':
                     break;
                 default:
