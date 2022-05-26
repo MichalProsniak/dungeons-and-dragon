@@ -14,7 +14,7 @@ namespace Assets.Source.Actors.Items
 
         public Sword()
         {
-            OffensiveStats.AttackDamage = 10;
+            OffensiveStats.AttackDamage = 5;
             OffensiveStats.Accuracy = 1;
             DefensiveStats.Armor = 0;
             DefensiveStats.Evade = 0;
