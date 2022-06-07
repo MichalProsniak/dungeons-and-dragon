@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="merge">
+    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/codecoolOOP/team/week4/xxx/dungeon-crawl-2-csharp-HubertKrzysztonek/Assets/Source/Core/SaveDao.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Core/SaveDao.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/codecoolOOP/team/week4/xxx/dungeon-crawl-2-csharp-HubertKrzysztonek/Assets/Source/Core/SaveDao.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -33,10 +26,6 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -85,23 +74,18 @@
       <option name="presentableId" value="Default" />
       <updated>1654592502182</updated>
       <workItem from="1654592531639" duration="45000" />
-      <workItem from="1654604435724" duration="1976000" />
+      <workItem from="1654601598848" duration="33000" />
+      <workItem from="1654605098721" duration="1249000" />
+      <workItem from="1654606592496" duration="343000" />
     </task>
-    <task id="LOCAL-00001" summary="merge">
-      <created>1654604753815</created>
+    <task id="LOCAL-00001" summary="Saving to game_state table added">
+      <created>1654606099875</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1654604753815</updated>
+      <updated>1654606099875</updated>
     </task>
-    <task id="LOCAL-00002" summary="merge">
-      <created>1654606115139</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1654606115139</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +107,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="Saving to game_state table added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Saving to game_state table added" />
   </component>
 </project>

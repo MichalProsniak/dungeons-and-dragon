@@ -16,7 +16,6 @@ namespace DungeonCrawl.Actors.Characters
         public override bool Destroyable { get; set; } = false;
         private int _movementCounter = 0;
         private int _playerMovementSpeed = 60;
-        private readonly DataManager _dataManager;
         private readonly SaveDao _saveDao;
         public int swordNumber = 0;
         public int armorNumber = 0;
@@ -34,8 +33,7 @@ namespace DungeonCrawl.Actors.Characters
             OffensiveStats.Accuracy = 7;
             OffensiveStats.IsWeapon = false;
             Inventory = new Inventory();
-            _dataManager = DataManager.Singleton;
-            _saveDao = new SaveDao(_dataManager.ConnectionString);
+            _saveDao = new SaveDao(DataManager.Singleton.ConnectionString);
         }
         //Inventory playerInventory = new Inventory();
         protected override void OnUpdate(float deltaTime)

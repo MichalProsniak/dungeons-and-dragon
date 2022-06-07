@@ -9,15 +9,10 @@ namespace DungeonCrawl.Core
 {
     public class DataManager : MonoBehaviour
     {
-        private readonly SaveDao _saveDao;
         public static DataManager Singleton { get; private set; }
         // public string ConnectionString => @"Server=localhost;Database=Dungeons;Integrated Security=True;";
          public string ConnectionString => @"Server=localhost;Database=Dungeons;User Id=Damian;Password=Explorer1;";
-
-        public DataManager()
-        {
-            _saveDao = new SaveDao(ConnectionString);
-        }
+         
         private void Awake()
         {
             if (Singleton != null)
