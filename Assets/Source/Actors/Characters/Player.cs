@@ -121,6 +121,7 @@ namespace DungeonCrawl.Actors.Characters
             {
                 _saveDao.Save(this);
                 Debug.Log("F5 clicked");
+                UserInterface.Singleton.SetText("GAME SAVED!", UserInterface.TextPosition.TopLeft);
                 
             }
             
