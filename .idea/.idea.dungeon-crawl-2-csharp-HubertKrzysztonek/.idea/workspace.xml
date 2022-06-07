@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/indexLayout.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Spritesheet.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Spritesheet.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2AF5TNy5IALKMXzgGrhbrGOjb2a" />
   <component name="ProjectViewState">
@@ -23,6 +27,11 @@
     "WebServerToolWindowFactoryState": "false",
     "rider.run.widget.enabled.cache": "false",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -64,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654592502182</updated>
       <workItem from="1654592531639" duration="45000" />
+      <workItem from="1654604435724" duration="90000" />
     </task>
     <servers />
   </component>
