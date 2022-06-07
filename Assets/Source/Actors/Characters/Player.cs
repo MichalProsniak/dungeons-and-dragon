@@ -2,6 +2,7 @@
 using System;
 using Assets.Source.Actors.Items;
 using Assets.Source.Core;
+using DungeonCrawl.Actors.Static;
 using DungeonCrawl.Core;
 using Source.Core;
 using UnityEngine;
@@ -17,6 +18,11 @@ namespace DungeonCrawl.Actors.Characters
         private int _playerMovementSpeed = 60;
         private readonly DataManager _dataManager;
         private readonly SaveDao _saveDao;
+        public int swordNumber = 0;
+        public int armorNumber = 0;
+        public int keyNumber = 0;
+        public int currentMap = 1;
+        
 
         public Player()
         {
@@ -51,6 +57,7 @@ namespace DungeonCrawl.Actors.Characters
                     // Move up
                     _actorAtTargetPosition = TryMove(Direction.Up);
                     _movementCounter = 0;
+                    MapChange(_actorAtTargetPosition);
                 }
 
                 _movementCounter++;
@@ -64,6 +71,7 @@ namespace DungeonCrawl.Actors.Characters
                 {
                     _actorAtTargetPosition = TryMove(Direction.Down);
                     _movementCounter = 0;
+                    MapChange(_actorAtTargetPosition);
                 }
 
                 _movementCounter++;
@@ -76,6 +84,7 @@ namespace DungeonCrawl.Actors.Characters
                     
                     _actorAtTargetPosition = TryMove(Direction.Left);
                     _movementCounter = 0;
+                    MapChange(_actorAtTargetPosition);
                 }
 
                 _movementCounter++;
@@ -88,6 +97,7 @@ namespace DungeonCrawl.Actors.Characters
                     // Move up
                     _actorAtTargetPosition = TryMove(Direction.Right);
                     _movementCounter = 0;
+                    MapChange(_actorAtTargetPosition);
                 }
 
                 _movementCounter++;
@@ -119,7 +129,16 @@ namespace DungeonCrawl.Actors.Characters
                 if (_actorAtTargetPosition is Item)
                 {   if (_actorAtTargetPosition is Sword)
                     {
+                        swordNumber++;
                         SetSprite(27);
+                    }
+                    else if (_actorAtTargetPosition is Armor)
+                    {
+                        armorNumber++;
+                    }
+                    else if (_actorAtTargetPosition is Key)
+                    {
+                        keyNumber++;
                     }
                     _actorAtTargetPosition.IsPicked = true;
                     
@@ -130,6 +149,18 @@ namespace DungeonCrawl.Actors.Characters
             }
             PlayerInformationInterface();
             CameraController.Singleton.Position = Position;
+        }
+
+        private void MapChange(Actor targetActor)
+        {
+            if (targetActor is OpenedDoor)
+            {
+                currentMap = 2;
+            }
+            else if (targetActor is OpenDoor2)
+            {
+                currentMap = 3;
+            }
         }
 
         private void AddStatisticsFromItem(Actor item)
