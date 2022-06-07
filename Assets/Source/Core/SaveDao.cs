@@ -21,7 +21,8 @@ namespace Source.Core
             const string insertCommand = @"INSERT INTO player (player_name, max_hp, current_hp, position_x, position_y,
             armor, evade, attack_damage, accuracy, sword_number, armor_number, key_number)
                         VALUES (@player_name, @max_hp, @current_hp, @position_x, @position_y, @armor,
-                                @evade, @attack_damage, @accuracy, @sword_number, @armor_number, @key_number);";
+                                @evade, @attack_damage, @accuracy, @sword_number, @armor_number, @key_number);
+                        SELECT SCOPE_IDENTITY();";
             try
             {
                 using (var connection = new SqlConnection(_connectionString))
@@ -42,7 +43,8 @@ namespace Source.Core
                     cmd.Parameters.AddWithValue("@sword_number", player.swordNumber);
                     cmd.Parameters.AddWithValue("@armor_number", player.armorNumber);
                     cmd.Parameters.AddWithValue("@key_number", player.keyNumber);
-                    cmd.ExecuteNonQuery();
+                    int playerId = Convert.ToInt32(cmd.ExecuteScalar());
+                    this.UpdateGameState(playerId, player);
                     connection.Close();
                 }
             }
@@ -80,7 +82,7 @@ namespace Source.Core
 
         public void DeleteFromDB()
         {
-            const string insertCommand = @"DELETE FROM player; DELETE FROM game_state;";
+            const string insertCommand = @"DELETE FROM game_state; DELETE  FROM player;";
             try
             {
                 using (var connection = new SqlConnection(_connectionString))
@@ -99,6 +101,20 @@ namespace Source.Core
             }
         }
 
+        public void Save(Player player)
+        {
+            if (!IsDBEmpty())
+            {
+                Debug.Log("Delete + INSERT");
+               this.DeleteFromDB(); 
+               this.InsertDataToDB(player);
+            }
+            else
+            {
+                Debug.Log("INSERT");
+                this.InsertDataToDB(player);
+            }
+        }
         public void UpdateGameState(int id, Player player)
         {
             const string insertCommand = @"INSERT INTO game_state (current_map, player_id)
@@ -121,41 +137,6 @@ namespace Source.Core
             {
                 throw new RuntimeWrappedException(e);
             }
-        }
-        public int GetPlayerID()
-        {
-            const string insertCommand = @"SELECT MAX(id) FROM player;";
-            try
-            {
-                using (var connection = new SqlConnection(_connectionString))
-                {
-                    var cmd = new SqlCommand(insertCommand, connection);
-                    if (connection.State == ConnectionState.Closed)
-                        connection.Open();
-                    var playerId = cmd.ExecuteReader();
-                    Debug.Log(playerId);
-                    return int(playerId);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw new RuntimeWrappedException(e);
-            }
-            
-        }
-        public void Save(Player player)
-        {
-            if (!IsDBEmpty())
-            {
-                Debug.Log("Delete");
-                this.DeleteFromDB();
-            }
-
-            Debug.Log("INSERT");
-            this.InsertDataToDB(player);
-            int playerId = GetPlayerID();
-            UpdateGameState(playerId, player);
         }
 
     }
