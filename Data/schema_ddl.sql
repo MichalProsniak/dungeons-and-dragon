@@ -13,5 +13,5 @@ CREATE TABLE dbo.player (
     x integer NOT NULL,
     y integer NOT NULL
 );
-ALTER TABLE ONLY dbo.game_state
-    ADD CONSTRAINT fk_player_id FOREIGN dbo.KEY (player_id) REFERENCES dbo.player(id);
+ALTER TABLE dbo.game_state
+    ADD CONSTRAINT fk_player_id FOREIGN KEY (player_id) REFERENCES dbo.player(id);

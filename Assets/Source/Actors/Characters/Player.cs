@@ -12,6 +12,8 @@ namespace DungeonCrawl.Actors.Characters
         private int _openCloseInventoryCounter = 0;
         private Actor _actorAtTargetPosition;
         public override bool Destroyable { get; set; } = false;
+        private int _movementCounter = 0;
+        private int _playerMovementSpeed = 60;
 
         public Player()
         {
@@ -37,28 +39,53 @@ namespace DungeonCrawl.Actors.Characters
                 OnDeath();
             }
            
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
-                // Move up
-                _actorAtTargetPosition = TryMove(Direction.Up);
+                if (_movementCounter == _playerMovementSpeed)
+                {
+                    // Move up
+                    _actorAtTargetPosition = TryMove(Direction.Up);
+                    _movementCounter = 0;
+                }
+
+                _movementCounter++;
+
+
             }
 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))
             {
-                // Move down
-                _actorAtTargetPosition = TryMove(Direction.Down);
+                if (_movementCounter == _playerMovementSpeed)
+                {
+                    _actorAtTargetPosition = TryMove(Direction.Down);
+                    _movementCounter = 0;
+                }
+
+                _movementCounter++;
             }
 
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
-                // Move left
-                _actorAtTargetPosition = TryMove(Direction.Left);
+                if (_movementCounter == _playerMovementSpeed)
+                {
+                    
+                    _actorAtTargetPosition = TryMove(Direction.Left);
+                    _movementCounter = 0;
+                }
+
+                _movementCounter++;
             }
 
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
-                // Move right
-                _actorAtTargetPosition = TryMove(Direction.Right);
+                if (_movementCounter == _playerMovementSpeed)
+                {
+                    // Move up
+                    _actorAtTargetPosition = TryMove(Direction.Right);
+                    _movementCounter = 0;
+                }
+
+                _movementCounter++;
             }
 
             if (Input.GetKeyDown(KeyCode.I))
