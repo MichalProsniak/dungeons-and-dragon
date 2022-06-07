@@ -21,7 +21,8 @@ namespace Source.Core
             const string insertCommand = @"INSERT INTO player (player_name, max_hp, current_hp, position_x, position_y,
             armor, evade, attack_damage, accuracy, sword_number, armor_number, key_number)
                         VALUES (@player_name, @max_hp, @current_hp, @position_x, @position_y, @armor,
-                                @evade, @attack_damage, @accuracy, @sword_number, @armor_number, @key_number);";
+                                @evade, @attack_damage, @accuracy, @sword_number, @armor_number, @key_number);
+                        SELECT SCOPE_IDENTITY();";
             try
             {
                 using (var connection = new SqlConnection(_connectionString))
@@ -42,7 +43,8 @@ namespace Source.Core
                     cmd.Parameters.AddWithValue("@sword_number", player.swordNumber);
                     cmd.Parameters.AddWithValue("@armor_number", player.armorNumber);
                     cmd.Parameters.AddWithValue("@key_number", player.keyNumber);
-                    cmd.ExecuteNonQuery();
+                    int playerId = Convert.ToInt32(cmd.ExecuteScalar());
+                    this.UpdateGameState(playerId, player);
                     connection.Close();
                 }
             }
@@ -80,7 +82,7 @@ namespace Source.Core
 
         public void DeleteFromDB()
         {
-            const string insertCommand = @"DELETE  FROM player;";
+            const string insertCommand = @"DELETE FROM game_state; DELETE  FROM player;";
             try
             {
                 using (var connection = new SqlConnection(_connectionString))
@@ -111,6 +113,29 @@ namespace Source.Core
             {
                 Debug.Log("INSERT");
                 this.InsertDataToDB(player);
+            }
+        }
+        public void UpdateGameState(int id, Player player)
+        {
+            const string insertCommand = @"INSERT INTO game_state (current_map, player_id)
+                        VALUES (@current_map, @player_id);";
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    Debug.Log("Saving...");
+                    var cmd = new SqlCommand(insertCommand, connection);
+                    if (connection.State == ConnectionState.Closed)
+                        connection.Open();
+                    cmd.Parameters.AddWithValue("@current_map", player.currentMap);
+                    cmd.Parameters.AddWithValue("@player_id", id);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (SqlException e)
+            {
+                throw new RuntimeWrappedException(e);
             }
         }
 
