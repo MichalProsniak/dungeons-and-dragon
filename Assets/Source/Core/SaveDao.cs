@@ -80,7 +80,7 @@ namespace Source.Core
 
         public void DeleteFromDB()
         {
-            const string insertCommand = @"DELETE  FROM player;";
+            const string insertCommand = @"DELETE FROM player; DELETE FROM game_state;";
             try
             {
                 using (var connection = new SqlConnection(_connectionString))
@@ -99,19 +99,63 @@ namespace Source.Core
             }
         }
 
+        public void UpdateGameState(int id, Player player)
+        {
+            const string insertCommand = @"INSERT INTO game_state (current_map, player_id)
+                        VALUES (@current_map, @player_id);";
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    Debug.Log("Saving...");
+                    var cmd = new SqlCommand(insertCommand, connection);
+                    if (connection.State == ConnectionState.Closed)
+                        connection.Open();
+                    cmd.Parameters.AddWithValue("@current_map", player.currentMap);
+                    cmd.Parameters.AddWithValue("@player_id", id);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (SqlException e)
+            {
+                throw new RuntimeWrappedException(e);
+            }
+        }
+        public int GetPlayerID()
+        {
+            const string insertCommand = @"SELECT MAX(id) FROM player;";
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    var cmd = new SqlCommand(insertCommand, connection);
+                    if (connection.State == ConnectionState.Closed)
+                        connection.Open();
+                    var playerId = cmd.ExecuteReader();
+                    Debug.Log(playerId);
+                    return int(playerId);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw new RuntimeWrappedException(e);
+            }
+            
+        }
         public void Save(Player player)
         {
             if (!IsDBEmpty())
             {
-                Debug.Log("Delete + INSERT");
-               this.DeleteFromDB(); 
-               this.InsertDataToDB(player);
+                Debug.Log("Delete");
+                this.DeleteFromDB();
             }
-            else
-            {
-                Debug.Log("INSERT");
-                this.InsertDataToDB(player);
-            }
+
+            Debug.Log("INSERT");
+            this.InsertDataToDB(player);
+            int playerId = GetPlayerID();
+            UpdateGameState(playerId, player);
         }
 
     }
