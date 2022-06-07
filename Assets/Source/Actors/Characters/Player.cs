@@ -3,6 +3,7 @@ using System;
 using Assets.Source.Actors.Items;
 using Assets.Source.Core;
 using DungeonCrawl.Core;
+using Source.Core;
 using UnityEngine;
 
 namespace DungeonCrawl.Actors.Characters
@@ -14,6 +15,8 @@ namespace DungeonCrawl.Actors.Characters
         public override bool Destroyable { get; set; } = false;
         private int _movementCounter = 0;
         private int _playerMovementSpeed = 60;
+        private readonly DataManager _dataManager;
+        private readonly SaveDao _saveDao;
 
         public Player()
         {
@@ -25,6 +28,8 @@ namespace DungeonCrawl.Actors.Characters
             OffensiveStats.Accuracy = 7;
             OffensiveStats.IsWeapon = false;
             Inventory = new Inventory();
+            _dataManager = DataManager.Singleton;
+            _saveDao = new SaveDao(_dataManager.ConnectionString);
         }
         //Inventory playerInventory = new Inventory();
         protected override void OnUpdate(float deltaTime)
@@ -101,6 +106,14 @@ namespace DungeonCrawl.Actors.Characters
                     UserInterface.Singleton.SetText("", UserInterface.TextPosition.MiddleLeft);
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.F5))
+            {
+                _saveDao.Save(this);
+                Debug.Log("F5 clicked");
+                
+            }
+            
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (_actorAtTargetPosition is Item)
