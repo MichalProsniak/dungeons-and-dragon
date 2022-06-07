@@ -16,7 +16,7 @@ namespace Source.Core
             _connectionString = connectionString;
         }
 
-        public void Save(Player player)
+        public void InsertDataToDB(Player player)
         {
             const string insertCommand = @"INSERT INTO player (player_name, max_hp, current_hp, position_x, position_y,
             armor, evade, attack_damage, accuracy, sword_number, armor_number, key_number)
@@ -51,5 +51,68 @@ namespace Source.Core
                 throw new RuntimeWrappedException(e);
             }
         }
+        public bool IsDBEmpty()
+        {
+            
+            const string insertCommand = @"SELECT * FROM player;";
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    Debug.Log("Reading...");
+                    var cmd = new SqlCommand(insertCommand, connection);
+                    if (connection.State == ConnectionState.Closed)
+                        connection.Open();
+                    var reader = cmd.ExecuteReader();
+                    if (!reader.Read()) // first row was not found == no data was returned by the query
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw new RuntimeWrappedException(e);
+            }
+        }
+
+        public void DeleteFromDB()
+        {
+            const string insertCommand = @"DELETE  FROM player;";
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    Debug.Log("Reading...");
+                    var cmd = new SqlCommand(insertCommand, connection);
+                    if (connection.State == ConnectionState.Closed)
+                        connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw new RuntimeWrappedException(e);
+            }
+        }
+
+        public void Save(Player player)
+        {
+            if (!IsDBEmpty())
+            {
+                Debug.Log("Delete + INSERT");
+               this.DeleteFromDB(); 
+               this.InsertDataToDB(player);
+            }
+            else
+            {
+                Debug.Log("INSERT");
+                this.InsertDataToDB(player);
+            }
+        }
+
     }
 }
