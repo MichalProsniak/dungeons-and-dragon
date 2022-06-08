@@ -6,6 +6,10 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Dragon : Character
     {
+        private int _timer = 800;
+        private int _counter = 0;
+        private int _nextFireDirection = 0;
+        
         public Dragon()
         {
             DefensiveStats.MaxHealth = 100;
@@ -22,6 +26,123 @@ namespace DungeonCrawl.Actors.Characters
             {
                 OnDeath();
             }
+            
+
+            _counter++;
+
+            if (DefensiveStats.CurrentHealth > 50)
+            {
+                if (_counter == _timer)
+                {
+                    _counter = 0;
+                    if (_nextFireDirection == 0)
+                    {
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y - 1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y - 2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+1, Position.y - 2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-1, Position.y - 2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y - 3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+1, Position.y - 3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+2, Position.y - 3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-1, Position.y - 3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-2, Position.y - 3);
+                        _nextFireDirection = 1;
+                    }
+                    else if (_nextFireDirection == 1)
+                    {
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+1, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+2, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+2, Position.y+1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+2, Position.y-1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+3, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+3, Position.y+1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+3, Position.y+2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+3, Position.y-1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+3, Position.y-2);
+                        _nextFireDirection = 2;
+                    }
+                    else if (_nextFireDirection == 2)
+                    {
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y+1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y+2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+1, Position.y+2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-1, Position.y+2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y+3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+1, Position.y+3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+2, Position.y+3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-1, Position.y+3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-2, Position.y+3);
+                        _nextFireDirection = 3;
+                    }
+                    else
+                    {
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-1, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-2, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-2, Position.y+1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-2, Position.y-1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-3, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-3, Position.y+1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-3, Position.y+2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-3, Position.y-1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-3, Position.y-2);
+                        _nextFireDirection = 0;
+                    }
+                }
+            }
+            else
+            {
+                if (_counter == _timer)
+                {
+                    _counter = 0;
+                    if (_nextFireDirection == 0)
+                    {
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y - 1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y - 2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+1, Position.y - 2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-1, Position.y - 2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y - 3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+1, Position.y - 3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+2, Position.y - 3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-1, Position.y - 3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-2, Position.y - 3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y+1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y+2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+1, Position.y+2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-1, Position.y+2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x, Position.y+3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+1, Position.y+3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+2, Position.y+3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-1, Position.y+3);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-2, Position.y+3);
+                        _nextFireDirection = 1;
+                    }
+                    else
+                    {
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+1, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+2, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+2, Position.y+1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+2, Position.y-1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+3, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+3, Position.y+1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+3, Position.y+2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+3, Position.y-1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x+3, Position.y-2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-1, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-2, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-2, Position.y+1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-2, Position.y-1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-3, Position.y);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-3, Position.y+1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-3, Position.y+2);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-3, Position.y-1);
+                        ActorManager.Singleton.Spawn<DragonsBreath>(Position.x-3, Position.y-2);
+                        _nextFireDirection = 0;
+                    }
+                }
+            }
+            
+            
+            
         }
         
         public override bool OnCollision(Actor anotherActor)

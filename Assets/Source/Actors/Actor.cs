@@ -111,6 +111,11 @@ namespace DungeonCrawl.Actors
                     {
                         Position = targetPosition;
                     }
+                    else if (actorAtTargetPosition is DragonsBreath)
+                    {
+                        Position = targetPosition;
+                        DefensiveStats.CurrentHealth -= 5;
+                    }
                 }
             }
             return actorAtTargetPosition;

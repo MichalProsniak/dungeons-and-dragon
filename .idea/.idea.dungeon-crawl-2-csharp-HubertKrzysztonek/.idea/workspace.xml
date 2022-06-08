@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="save game with inventory">
+    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="inventory refactor, toString method bug fix">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/DragonsBreath.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/DragonsBreath.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Items/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Items/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/map_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/map_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Actor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Actor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Dragon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Dragon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Game.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/61/42e46aa5/SpriteRenderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/8a/254fbf75/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/codecoolOOP/team/week4/yyyy/dungeon-crawl-2-csharp-HubertKrzysztonek/Assets/Source/Actors/Actor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/codecoolOOP/team/week4/yyyy/dungeon-crawl-2-csharp-HubertKrzysztonek/Assets/Source/Actors/Items/Inventory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/SaveDao.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
@@ -93,7 +97,7 @@
       <workItem from="1654604435724" duration="1976000" />
       <workItem from="1654673590156" duration="1510000" />
       <workItem from="1654675191228" duration="953000" />
-      <workItem from="1654678597284" duration="3195000" />
+      <workItem from="1654678597284" duration="6688000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1654604753815</created>
@@ -123,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654680855295</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="inventory refactor, toString method bug fix">
+      <created>1654681847056</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654681847056</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +169,7 @@
     <MESSAGE value="merge" />
     <MESSAGE value="load game without inventory" />
     <MESSAGE value="save game with inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="save game with inventory" />
+    <MESSAGE value="inventory refactor, toString method bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="inventory refactor, toString method bug fix" />
   </component>
 </project>

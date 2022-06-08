@@ -82,6 +82,7 @@
      <Compile Include="Assets\Source\Core\ActorManager.cs" />
      <Compile Include="Assets\Source\Actors\Characters\DefensiveStats.cs" />
      <Compile Include="Assets\Source\Core\LoadDao.cs" />
+     <Compile Include="Assets\Source\Actors\Characters\DragonsBreath.cs" />
      <None Include="Assets\Source\Game.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
