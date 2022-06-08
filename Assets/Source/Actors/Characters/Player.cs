@@ -22,7 +22,7 @@ namespace DungeonCrawl.Actors.Characters
         public int keyNumber = 0;
         public int currentMap = 1;
         private readonly LoadDao _loadDao;
-        
+        public int Z = -1;
 
         public Player()
         {
