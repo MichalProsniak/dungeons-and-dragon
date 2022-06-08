@@ -10,8 +10,8 @@ namespace DungeonCrawl.Core
     public class DataManager : MonoBehaviour
     {
         public static DataManager Singleton { get; private set; }
-        // public string ConnectionString => @"Server=localhost;Database=Dungeons;Integrated Security=True;";
-         public string ConnectionString => @"Server=localhost;Database=Dungeons;User Id=Damian;Password=Explorer1;";
+        public string ConnectionString => @"Server=localhost;Database=Dungeons;Integrated Security=True;";
+         //public string ConnectionString => @"Server=localhost;Database=Dungeons;User Id=Damian;Password=Explorer1;";
          
         private void Awake()
         {
