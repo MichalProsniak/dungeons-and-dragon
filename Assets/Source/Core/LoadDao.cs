@@ -89,6 +89,10 @@ namespace Source.Core
                         {
                             player.swordNumber++;
                             player.Inventory.Add(new Sword());
+                            if (i == 0)
+                            {
+                                player.SetSprite(27);
+                            }
                         }
                         for (int i = 0; i < reader.GetInt32("armor_number"); i++)
                         {

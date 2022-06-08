@@ -21,8 +21,6 @@ namespace Assets.Source.Actors.Items
             {
                 _playerInventory.Add(item); 
             }
-            
-            
         }
 
         public void RemoveAllItems()
@@ -40,13 +38,41 @@ namespace Assets.Source.Actors.Items
             get { return _playerInventory[index]; } // indexer zapamietac 
         }
 
+        private string CountedItemMessage(int number, string itemName)
+        {
+            if (number > 0)
+            {
+                return $"{itemName}: {number}\n";
+            }
+
+            return "";
+        }
+
         public override string ToString()
         {
-            string stringList = "INVENTORY \n";   
+            string stringList = "INVENTORY \n";
+            int armors = 0;
+            int swords = 0;
+            int keys = 0;
             for (int i = 0; i < _playerInventory.Count(); i++)
             {
-                stringList += _playerInventory[i].DefaultName + "\n";
+                if (_playerInventory[i] is Sword)
+                {
+                    swords++;
+                }
+                if (_playerInventory[i] is Armor)
+                {
+                    armors++;
+                }
+                if (_playerInventory[i] is Key)
+                {
+                    keys++;
+                }
             }
+
+            stringList += CountedItemMessage(swords, "SWORD");
+            stringList += CountedItemMessage(armors, "ARMOR");
+            stringList += CountedItemMessage(keys, "KEY");
             return stringList;
         }
 

@@ -136,6 +136,7 @@ namespace DungeonCrawl.Actors.Characters
                 keyNumber = 0;
                 armorNumber = 0;
                 swordNumber = 0;
+                SetSprite(24);
                 _loadDao.GetInventory(this);
 
             }
