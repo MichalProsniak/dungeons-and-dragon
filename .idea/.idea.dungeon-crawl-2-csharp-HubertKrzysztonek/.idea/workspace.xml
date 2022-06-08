@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="inventory refactor, toString method bug fix">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/DragonsBreath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/DragonsBreath.cs.meta" afterDir="false" />
+    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f/storage_v2/_src_/database/Dungeons.GSGZhg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f/storage_v2/_src_/database/Dungeons.GSGZhg/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f/storage_v2/_src_/database/Dungeons.GSGZhg/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/map_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/map_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Actor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Actor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Dragon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Dragon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/DragonsBreath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/DragonsBreath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Game.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,15 +21,24 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/61/42e46aa5/SpriteRenderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/8a/254fbf75/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/codecoolOOP/team/week4/yyyy/dungeon-crawl-2-csharp-HubertKrzysztonek/Assets/Source/Actors/Actor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/codecoolOOP/team/week4/yyyy/dungeon-crawl-2-csharp-HubertKrzysztonek/Assets/Source/Actors/Items/Inventory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Actors/Actor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Actors/Characters/Dragon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Actors/Characters/DragonsBreath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Actors/Characters/Ghost.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Core/ActorManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/SaveDao.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/DataManagerTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2AF5TNy5IALKMXzgGrhbrGOjb2a" />
   <component name="ProjectViewState">
@@ -64,10 +73,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10752">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="10752" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -97,7 +106,8 @@
       <workItem from="1654604435724" duration="1976000" />
       <workItem from="1654673590156" duration="1510000" />
       <workItem from="1654675191228" duration="953000" />
-      <workItem from="1654678597284" duration="6688000" />
+      <workItem from="1654678597284" duration="8624000" />
+      <workItem from="1654690357662" duration="1081000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1654604753815</created>
@@ -134,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654681847056</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="boss fight">
+      <created>1654688581086</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654688581086</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +187,7 @@
     <MESSAGE value="load game without inventory" />
     <MESSAGE value="save game with inventory" />
     <MESSAGE value="inventory refactor, toString method bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="inventory refactor, toString method bug fix" />
+    <MESSAGE value="boss fight" />
+    <option name="LAST_COMMIT_MESSAGE" value="boss fight" />
   </component>
 </project>

@@ -27,13 +27,20 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnUpdate(float deltaTime)
         {
-            if (_counter == _timer)
+            _counter++;
+            if (_counter >= _timer)
             {
                 OnDeath();
                 _counter = 0;
             }
-
-            _counter++;
+            (int x, int y) targetPosition = (Position.x, Position.y);
+            var actorAtTargetPosition = ActorManager.Singleton.GetActorAt(targetPosition);
+            if (actorAtTargetPosition is Player)
+            {
+                ActorManager.Singleton.player.DefensiveStats.CurrentHealth -= 5;
+            }
+            
+             
         }
 
         protected override void OnDeath()
