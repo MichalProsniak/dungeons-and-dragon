@@ -5,31 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f/storage_v2/_src_/database/Dungeons.GSGZhg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f/storage_v2/_src_/database/Dungeons.GSGZhg/schema/dbo.sYMBAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f/storage_v2/_src_/database/Dungeons.GSGZhg/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2022_14_54_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2022_14_54__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Game.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Game.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tests.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tests/DataManagerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tests/DataManagerTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tests/Tests.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tests/Tests.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/TextMeshPro.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/TextMeshPro.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewAssembly.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TextMeshPro.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2022_14_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2022_14_54__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dungeon-crawl-2-csharp-HubertKrzysztonek.sln" beforeDir="false" afterPath="$PROJECT_DIR$/dungeon-crawl-2-csharp-HubertKrzysztonek.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/map_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/map_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Actor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Actor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Bat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Bat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Dragon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Dragon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Gargoyle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Gargoyle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Ghost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Ghost.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Skeleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Skeleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Items/Key.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Items/Key.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Items/Sword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Items/Sword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Apple.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Apple.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Armor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Armor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/CampFire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/CampFire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Column.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Column.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Door.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/DoubleTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/DoubleTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Floor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Floor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Grass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Grass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/HidenTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/HidenTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/LeftBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/LeftBridge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/MiddleBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/MiddleBridge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/OpenDoor2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/OpenDoor2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/OpenedDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/OpenedDoor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/RightBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/RightBridge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/RiverFilling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/RiverFilling.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/SingleTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/SingleTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Torch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Torch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Wall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Core/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Game.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMeshPro.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TextMeshPro.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +83,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="Q:\Unity\2021.3.3f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.3f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\huber\Projekty\MOD3\dungeon-crawl-2-csharp-HubertKrzysztonek -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\huber\Projekty\MOD3\dungeon-crawl-2-csharp-HubertKrzysztonek" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -111,6 +123,7 @@
       <workItem from="1654604435724" duration="1976000" />
       <workItem from="1654673590156" duration="1510000" />
       <workItem from="1654675191228" duration="953000" />
+      <workItem from="1654678597284" duration="374000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1654604753815</created>
