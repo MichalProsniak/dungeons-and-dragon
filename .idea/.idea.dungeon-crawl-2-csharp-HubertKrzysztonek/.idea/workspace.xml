@@ -4,8 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="merge">
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" afterDir="false" />
+    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f/storage_v2/_src_/database/Dungeons.GSGZhg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f/storage_v2/_src_/database/Dungeons.GSGZhg/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources/90c8dbb6-4e62-4b56-918c-4c0a8feaf34f/storage_v2/_src_/database/Dungeons.GSGZhg/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2022_14_54_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2022_14_54__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/DataManagerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/DataManagerTests.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/Tests.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/Tests.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/TextMeshPro.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/TextMeshPro.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAssembly.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TextMeshPro.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dungeon-crawl-2-csharp-HubertKrzysztonek.sln" beforeDir="false" afterPath="$PROJECT_DIR$/dungeon-crawl-2-csharp-HubertKrzysztonek.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,10 +38,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/codecoolOOP/team/week4/xxx/dungeon-crawl-2-csharp-HubertKrzysztonek/Assets/Source/Core/SaveDao.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/SaveDao.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/codecoolOOP/team/week4/xxx/dungeon-crawl-2-csharp-HubertKrzysztonek/Assets/Source/Core/SaveDao.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Tests/DataManagerTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,7 +71,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.3f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="Q:\Unity\2021.3.3f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\huber\Projekty\MOD3\dungeon-crawl-2-csharp-HubertKrzysztonek -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\huber\Projekty\MOD3\dungeon-crawl-2-csharp-HubertKrzysztonek" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -86,6 +109,8 @@
       <updated>1654592502182</updated>
       <workItem from="1654592531639" duration="45000" />
       <workItem from="1654604435724" duration="1976000" />
+      <workItem from="1654673590156" duration="1510000" />
+      <workItem from="1654675191228" duration="953000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1654604753815</created>
@@ -106,6 +131,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="324" />
+    <coverage-tree-state>
+      <expand />
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
