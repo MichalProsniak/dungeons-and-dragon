@@ -25,6 +25,11 @@ namespace Assets.Source.Actors.Items
             
         }
 
+        public void RemoveAllItems()
+        {
+            _playerInventory.Clear();
+        }
+
         public int Count()
         {
             return _playerInventory.Count;

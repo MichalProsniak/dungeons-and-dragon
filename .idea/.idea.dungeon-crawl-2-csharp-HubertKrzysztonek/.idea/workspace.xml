@@ -4,44 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2022_14_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2022_14_54__Changes_.xml" afterDir="false" />
+    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="load game without inventory">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/map_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/map_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Actor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Actor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Bat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Bat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Dragon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Dragon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Gargoyle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Gargoyle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Ghost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Ghost.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Skeleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Characters/Skeleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Items/Key.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Items/Key.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Items/Sword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Items/Sword.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Apple.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Apple.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Armor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Armor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/CampFire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/CampFire.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Column.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Column.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/DoubleTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/DoubleTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Floor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Floor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Grass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Grass.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/HidenTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/HidenTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/LeftBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/LeftBridge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/MiddleBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/MiddleBridge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/OpenDoor2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/OpenDoor2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/OpenedDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/OpenedDoor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/RightBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/RightBridge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/RiverFilling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/RiverFilling.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/SingleTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/SingleTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Torch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Torch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Static/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Static/Wall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Core/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Game.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextMeshPro.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TextMeshPro.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Actors/Items/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Actors/Items/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +17,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/61/42e46aa5/SpriteRenderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/8a/254fbf75/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/codecoolOOP/team/week4/yyyy/dungeon-crawl-2-csharp-HubertKrzysztonek/Assets/Source/Actors/Actor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/SaveDao.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
@@ -123,7 +94,7 @@
       <workItem from="1654604435724" duration="1976000" />
       <workItem from="1654673590156" duration="1510000" />
       <workItem from="1654675191228" duration="953000" />
-      <workItem from="1654678597284" duration="374000" />
+      <workItem from="1654678597284" duration="2034000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1654604753815</created>
@@ -139,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654606115139</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="load game without inventory">
+      <created>1654679077429</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654679077429</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="load game without inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="load game without inventory" />
   </component>
 </project>

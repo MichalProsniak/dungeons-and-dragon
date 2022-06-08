@@ -132,6 +132,11 @@ namespace DungeonCrawl.Actors.Characters
                 ActorManager.Singleton.DestroyAllDestroyableActors();
                 MapLoader.LoadMap(mapIdToLoad);
                 _loadDao.GetPlayerStats(this);
+                Inventory.RemoveAllItems();
+                keyNumber = 0;
+                armorNumber = 0;
+                swordNumber = 0;
+                _loadDao.GetInventory(this);
 
             }
             
