@@ -21,6 +21,7 @@ namespace DungeonCrawl.Actors.Characters
         public int armorNumber = 0;
         public int keyNumber = 0;
         public int currentMap = 1;
+        private readonly LoadDao _loadDao;
         
 
         public Player()
@@ -34,6 +35,7 @@ namespace DungeonCrawl.Actors.Characters
             OffensiveStats.IsWeapon = false;
             Inventory = new Inventory();
             _saveDao = new SaveDao(DataManager.Singleton.ConnectionString);
+            _loadDao = new LoadDao(DataManager.Singleton.ConnectionString);
         }
         //Inventory playerInventory = new Inventory();
         protected override void OnUpdate(float deltaTime)
@@ -122,6 +124,22 @@ namespace DungeonCrawl.Actors.Characters
                 UserInterface.Singleton.SetText("GAME SAVED!", UserInterface.TextPosition.TopLeft);
                 
             }
+            if (Input.GetKeyDown(KeyCode.F9))
+            {
+                int mapIdToLoad = _loadDao.GetCurrentMap();
+                Debug.Log(mapIdToLoad);
+                UserInterface.Singleton.SetText("GAME LOAD!", UserInterface.TextPosition.TopLeft);
+                ActorManager.Singleton.DestroyAllDestroyableActors();
+                MapLoader.LoadMap(mapIdToLoad);
+                _loadDao.GetPlayerStats(this);
+                Inventory.RemoveAllItems();
+                keyNumber = 0;
+                armorNumber = 0;
+                swordNumber = 0;
+                SetSprite(24);
+                _loadDao.GetInventory(this);
+
+            }
             
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -184,7 +202,7 @@ namespace DungeonCrawl.Actors.Characters
         }
 
         public override int DefaultSpriteId => 24;
-        public override string DefaultName => "Ragnar";
+        public override string DefaultName { get; set; } = "Ragnar";
         
 
         private void PlayerInformationInterface()

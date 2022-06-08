@@ -3,6 +3,6 @@
     public class DoubleTree : Actor
     {
         public override int DefaultSpriteId => 50;
-        public override string DefaultName => "DoubleTree"; 
+        public override string DefaultName { get; set; } =  "DoubleTree"; 
     }
 }

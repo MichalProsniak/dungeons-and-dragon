@@ -63,6 +63,7 @@
     <Compile Include="Assets\Source\Actors\Static\DoubleTree.cs" />
     <Compile Include="Assets\Source\Actors\Characters\Bat.cs" />
     <Compile Include="Assets\Source\Actors\Characters\OffensiveStats.cs" />
+    <Compile Include="Assets\Source\Core\LoadDao.cs" />
     <Compile Include="Assets\Source\Actors\Static\OpenedDoor.cs" />
     <Compile Include="Assets\Source\Actors\Static\Floor.cs" />
     <Compile Include="Assets\Source\Core\CameraController.cs" />

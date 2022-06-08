@@ -22,22 +22,27 @@ namespace DungeonCrawl.Core
             }
 
             Singleton = this;
-            Singleton.OpenConnection();
+            Singleton.OpenConnection(ConnectionString);
         }
 
-        public void OpenConnection()
+        public bool OpenConnection(string conString)
         {
+            
             try
             {
                 using SqlConnection connection =
-                    new SqlConnection(ConnectionString);
+                    new SqlConnection(conString);
                 connection.Open();
                 Debug.Log(connection.ServerVersion);
+                return true;
             }
             catch (Exception e)
             {
                 Debug.Log(e.Message);
+                return false;
             }
         }
+        
+        
     }
 }

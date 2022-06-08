@@ -223,7 +223,7 @@ namespace DungeonCrawl.Actors
         /// <summary>
         ///     Default name assigned to this actor type
         /// </summary>
-        public abstract string DefaultName { get; }
+        public abstract string DefaultName { get; set; }
 
         public virtual bool Destroyable { get; set; } = true;
         

@@ -3,6 +3,6 @@
     public class Torch : Actor 
     {
         public override int DefaultSpriteId => 723;
-        public override string DefaultName => "Torch";
+        public override string DefaultName { get; set; } =  "Torch";
     }
 }

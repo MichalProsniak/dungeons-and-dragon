@@ -35,6 +35,6 @@ namespace DungeonCrawl.Actors.Characters
         }
 
         public override int DefaultSpriteId => 409;
-        public override string DefaultName => "Bat";
+        public override string DefaultName { get; set; } =  "Bat";
     }
 }

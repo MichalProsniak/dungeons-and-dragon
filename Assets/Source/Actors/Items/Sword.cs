@@ -10,7 +10,7 @@ namespace Assets.Source.Actors.Items
     public class Sword : Item
     {
         public override int DefaultSpriteId => 415;
-        public override string DefaultName => "Sword";
+        public override string DefaultName { get; set; } = "Sword";
 
         public Sword()
         {

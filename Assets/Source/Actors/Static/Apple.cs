@@ -6,7 +6,7 @@ namespace DungeonCrawl.Actors.Static
     public class Apple : Item
     {
         public override int DefaultSpriteId => 896;
-        public override string DefaultName => "Apple"; 
+        public override string DefaultName { get; set; } =  "Apple"; 
         
         public Apple()
         {
