@@ -108,7 +108,7 @@ namespace DungeonCrawl.Actors.Characters
         }
 
         public override int DefaultSpriteId => 314;
-        public override string DefaultName => "Ghost";
+        public override string DefaultName { get; set; } =  "Ghost";
 
         private void FollowPlayer()
         {

@@ -3,6 +3,6 @@
     public class RiverFilling : Actor
     {
         public override int DefaultSpriteId => 247;
-        public override string DefaultName => "RiverFilling"; 
+        public override string DefaultName { get; set; } =  "RiverFilling"; 
     }
 }

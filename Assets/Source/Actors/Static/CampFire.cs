@@ -3,6 +3,6 @@
     public class CampFire : Actor
     {
         public override int DefaultSpriteId => 493;
-        public override string DefaultName => "CampFire"; 
+        public override string DefaultName { get; set; } =  "CampFire"; 
     }
 }

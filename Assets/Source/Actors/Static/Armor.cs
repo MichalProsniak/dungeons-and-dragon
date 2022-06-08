@@ -5,7 +5,7 @@ namespace DungeonCrawl.Actors.Static
     public class Armor : Item
     {
         public override int DefaultSpriteId => 80;
-        public override string DefaultName => "Armor";
+        public override string DefaultName { get; set; } =  "Armor";
         public Armor()
         {
             OffensiveStats.AttackDamage = 0;
