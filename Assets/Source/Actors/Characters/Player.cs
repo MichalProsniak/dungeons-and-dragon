@@ -124,6 +124,27 @@ namespace DungeonCrawl.Actors.Characters
                 UserInterface.Singleton.SetText("GAME SAVED!", UserInterface.TextPosition.TopLeft);
                 
             }
+            if (Input.GetKeyDown(KeyCode.F10))
+            {
+                JSONInfo playerInfo = new JSONInfo();
+                playerInfo.accuracy = this.OffensiveStats.Accuracy;
+                playerInfo.armor = this.DefensiveStats.Armor;
+                playerInfo.armor_number = this.armorNumber;
+                playerInfo.attack_damage = this.OffensiveStats.AttackDamage;
+                playerInfo.current_hp = this.DefensiveStats.CurrentHealth;
+                playerInfo.max_hp = this.DefensiveStats.MaxHealth;
+                playerInfo.current_map = this.currentMap;
+                playerInfo.evade = this.DefensiveStats.Evade;
+                playerInfo.key_number =this.keyNumber;
+                playerInfo.player_name = this.DefaultName;
+                playerInfo.position_x = this.Position.x;
+                playerInfo.position_y = this.Position.y;
+                playerInfo.sword_number = this.swordNumber;
+                string jsonstring = SaveJSON.ConvertDataToJSON(playerInfo);
+                SaveJSON.SaveJSONToFile(jsonstring);
+                UserInterface.Singleton.SetText("GAME SAVED!", UserInterface.TextPosition.TopLeft);
+
+            }
             if (Input.GetKeyDown(KeyCode.F9))
             {
                 int mapIdToLoad = _loadDao.GetCurrentMap();
