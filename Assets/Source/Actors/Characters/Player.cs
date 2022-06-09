@@ -148,6 +148,7 @@ namespace DungeonCrawl.Actors.Characters
             if (Input.GetKeyDown(KeyCode.F9))
             {
                 int mapIdToLoad = _loadDao.GetCurrentMap();
+                currentMap = mapIdToLoad;
                 Debug.Log(mapIdToLoad);
                 UserInterface.Singleton.SetText("GAME LOAD!", UserInterface.TextPosition.TopLeft);
                 ActorManager.Singleton.DestroyAllDestroyableActors();
