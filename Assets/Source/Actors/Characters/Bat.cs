@@ -5,6 +5,7 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Bat : Character
     {
+        
         public Bat()
         {
             DefensiveStats.MaxHealth = 10;
