@@ -12,7 +12,7 @@ namespace DungeonCrawl.Actors.Characters
         
         public Dragon()
         {
-            DefensiveStats.MaxHealth = 100;
+            DefensiveStats.MaxHealth = 200;
             DefensiveStats.CurrentHealth = DefensiveStats.MaxHealth;
             DefensiveStats.Armor = 3;
             DefensiveStats.Evade = 2;
@@ -30,7 +30,7 @@ namespace DungeonCrawl.Actors.Characters
 
             _counter++;
 
-            if (DefensiveStats.CurrentHealth > 50)
+            if (DefensiveStats.CurrentHealth > 100)
             {
                 if (_counter == _timer)
                 {
