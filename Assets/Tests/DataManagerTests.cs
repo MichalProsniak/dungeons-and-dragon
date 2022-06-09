@@ -20,7 +20,7 @@ namespace DungeonCrawl.Core.Tests
       
       Assert.AreEqual(dataManager1, dataManager2);
     }
-
+    
     [Test]
     [TestCaseSource(nameof(ConnectionStringTests))]
     public void DataBaseConnection_WhenConnected_ReturnTrue(string connectionString, bool expectedValue)

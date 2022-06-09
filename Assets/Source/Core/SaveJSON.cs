@@ -20,7 +20,7 @@ namespace Assets.Source.Core
         public static void SaveJSONToFile(string jsonstring)
         {
             DateTime now = DateTime.Now;
-            System.IO.File.WriteAllText(Application.persistentDataPath + $"/{now.ToString("yy-MM-dd")}_{now.ToString("hh-mm-ss")}.json", jsonstring);
+            System.IO.File.WriteAllText(Application.persistentDataPath + $"/{now.ToString("yy-MM-dd")}_{now.ToString("HH-mm-ss")}.json", jsonstring);
         }
     }
 }

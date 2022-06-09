@@ -143,8 +143,31 @@ namespace DungeonCrawl.Actors.Characters
                 string jsonstring = SaveJSON.ConvertDataToJSON(playerInfo);
                 SaveJSON.SaveJSONToFile(jsonstring);
                 UserInterface.Singleton.SetText("GAME SAVED!", UserInterface.TextPosition.TopLeft);
+                
 
             }
+
+            if (Input.GetKeyDown(KeyCode.F11))
+            {
+                int temporaryKeyNumber = 0;
+                int temporarySwordNumber = 0;
+                int temporaryArmorNumber = 0;
+                LoadJSON jsonFileToRead = new LoadJSON();
+                ActorManager.Singleton.DestroyAllDestroyableActors();
+                jsonFileToRead.Load(this);
+                MapLoader.LoadMap(currentMap);
+                Inventory.RemoveAllItems();
+                temporaryKeyNumber = keyNumber;
+                temporarySwordNumber = swordNumber;
+                temporaryArmorNumber = armorNumber;
+                keyNumber = 0;
+                armorNumber = 0;
+                swordNumber = 0;
+                SetSprite(24);
+                jsonFileToRead.LoadInvetory(this, temporarySwordNumber, temporaryArmorNumber, temporaryKeyNumber);
+                
+            }
+
             if (Input.GetKeyDown(KeyCode.F9))
             {
                 int mapIdToLoad = _loadDao.GetCurrentMap();

@@ -7,8 +7,7 @@
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <auth-provider>ms-sso</auth-provider>
+      <user-name>Damian</user-name>
       <schema-mapping>
         <introspection-scope>
           <node kind="database" qname="@">
