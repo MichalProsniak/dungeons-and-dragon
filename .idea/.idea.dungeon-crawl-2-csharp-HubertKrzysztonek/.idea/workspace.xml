@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="merge">
+    <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="bug fix map change load">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Game.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +23,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/ActorManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/SaveDao.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/DataManagerTests.cs" root0="FORCE_HIGHLIGHTING" />
@@ -168,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654768210768</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="bug fix map change load">
+      <created>1654768993940</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654768993940</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +212,7 @@
     <MESSAGE value="boss fight" />
     <MESSAGE value="dragon attack bugged" />
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="bug fix map change load" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix map change load" />
   </component>
 </project>
