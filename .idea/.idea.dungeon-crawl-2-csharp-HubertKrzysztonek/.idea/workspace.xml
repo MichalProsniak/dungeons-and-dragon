@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6540b64c-c1c4-4c77-b14b-4ed825324b79" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2022_14_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2022_14_54__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dungeon-crawl-2-csharp-HubertKrzysztonek/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Spritesheet.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Spritesheet.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Core/SaveJSON.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Core/SaveJSON.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Game.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dungeon-crawl-2-csharp-HubertKrzysztonek.sln" beforeDir="false" afterPath="$PROJECT_DIR$/dungeon-crawl-2-csharp-HubertKrzysztonek.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/ActorManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Core/JSONInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/LoadDao.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Core/SaveDao.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
@@ -105,7 +104,9 @@
       <workItem from="1654678597284" duration="8624000" />
       <workItem from="1654690357662" duration="1081000" />
       <workItem from="1654693665145" duration="160000" />
-      <workItem from="1654763360082" duration="1178000" />
+      <workItem from="1654763360082" duration="1605000" />
+      <workItem from="1654766790324" duration="39000" />
+      <workItem from="1654766866344" duration="1219000" />
     </task>
     <task id="LOCAL-00001" summary="merge">
       <created>1654604753815</created>
@@ -149,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654688581086</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="useless pliki 3">
+      <created>1654766659916</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654766659916</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +194,7 @@
     <MESSAGE value="save game with inventory" />
     <MESSAGE value="inventory refactor, toString method bug fix" />
     <MESSAGE value="boss fight" />
-    <option name="LAST_COMMIT_MESSAGE" value="boss fight" />
+    <MESSAGE value="useless pliki 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="useless pliki 3" />
   </component>
 </project>

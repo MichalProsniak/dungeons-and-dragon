@@ -68,6 +68,7 @@
      <Compile Include="Assets\Source\Actors\Static\MiddleBridge.cs" />
      <Compile Include="Assets\Source\Actors\Static\HidenTree.cs" />
      <Compile Include="Assets\Source\Actors\Characters\Character.cs" />
+     <Compile Include="Assets\Source\Core\SaveJSON.cs" />
      <Compile Include="Assets\Source\Actors\Static\CampFire.cs" />
      <Compile Include="Assets\Source\Actors\Items\Sword.cs" />
      <Compile Include="Assets\Source\Actors\Static\Column.cs" />
@@ -82,6 +83,7 @@
      <Compile Include="Assets\Source\Actors\Static\Grass.cs" />
      <Compile Include="Assets\Source\Actors\Items\Item.cs" />
      <Compile Include="Assets\Source\Core\ActorManager.cs" />
+     <Compile Include="Assets\Source\Core\JSONInfo.cs" />
      <Compile Include="Assets\Source\Actors\Characters\DefensiveStats.cs" />
      <None Include="Assets\Source\Game.asmdef" />
      <Reference Include="UnityEngine">
